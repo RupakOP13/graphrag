@@ -26,8 +26,24 @@ builtins.print = _safe_print
 
 # =============================================================================
 # LLM Configuration (Groq — blazing fast free inference)
+# Key rotation: when one key hits the daily limit, automatically use the next
 # =============================================================================
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
+GROQ_API_KEY_2 = os.getenv("GROQ_API_KEY_2", "")
+
+# Build pool of all available keys (filter out empty strings)
+GROQ_API_KEY_POOL = [k for k in [GROQ_API_KEY, GROQ_API_KEY_2] if k.strip()]
+
+def get_groq_client():
+    """Return a Groq client using the primary key (rotates on rate limit in callers)."""
+    import groq as groq_lib
+    for key in GROQ_API_KEY_POOL:
+        try:
+            return groq_lib.Groq(api_key=key), key
+        except Exception:
+            continue
+    raise RuntimeError("No working Groq API key found.")
+
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 HF_TOKEN = os.getenv("HF_TOKEN", "")   # Optional: HuggingFace token for higher rate limits
 LLM_MODEL = "llama-3.3-70b-versatile"         # Best quality on Groq, 128K context

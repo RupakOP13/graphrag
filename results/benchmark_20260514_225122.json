@@ -1,0 +1,272 @@
+{
+  "llm_only": {
+    "pipeline": "LLM-Only",
+    "results": [
+      {
+        "pipeline_name": "LLM-Only",
+        "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+        "answer": "John McCarthy is widely considered the father of artificial intelligence (AI). He was an American computer scientist and cognitive scientist who made significant contributions to the field of AI. McCarthy's key contributions include:\n\n1. **Coining the term \"Artificial Intelligence\"**: McCarthy coined the term \"Artificial Intelligence\" in 1956, during the Dartmouth Summer Research Project on Artificial Intelligence, which he organized with Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This project is considered the birthplace of AI as a field of research.\n2. **Developing the Lisp programming language**: McCarthy developed the Lisp programming language in 1958, which became a fundamental tool for AI research. Lisp is a high-level, symbolic language that is well-suited for AI applications, such as symbolic reasoning, expert systems, and natural language processing.\n3. **Introducing the concept of time-sharing**: McCarthy introduced the concept of time-sharing, which allowed multiple users to interact with a computer simultaneously. This innovation enabled the development of interactive AI systems and paved the way for modern operating systems.\n4. **Proposing the idea of a \"logical\" AI**: McCarthy proposed the idea of a \"logical\" AI, which would use logical reasoning and problem-solving to achieve intelligent behavior. This approach is still a fundamental aspect of AI research today.\n5. **Organizing the first AI conference**: McCarthy organized the first AI conference, the 1956 Dartmouth Summer Research Project on Artificial Intelligence, which brought together researchers from various fields to discuss the possibilities of creating intelligent machines.\n6. **Advocating for AI research**: McCarthy was a strong advocate for AI research and its potential to benefit society. He worked to promote AI research and education, and his efforts helped to establish AI as a recognized field of study.\n\nMcCarthy's contributions to AI have had a lasting impact on the field, and his work continues to influence AI research and development today. He is widely recognized as one of the founders of AI, and his legacy continues to inspire new generations of AI researchers and practitioners.",
+        "prompt_tokens": 69,
+        "completion_tokens": 413,
+        "total_tokens": 482,
+        "latency_seconds": 2.066,
+        "cost_usd": 0.0,
+        "context_text": "",
+        "context_tokens": 0,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "expected_answer": "John McCarthy is widely considered the father of artificial intelligence. He coined the term 'artificial intelligence' in 1956 at the Dartmouth Conference, developed the Lisp programming language, and made fundamental contributions to the field including the concept of time-sharing in computing.",
+          "question_index": 0
+        }
+      }
+    ],
+    "avg_tokens": 482.0,
+    "avg_latency": 2.066,
+    "avg_cost": 0.0,
+    "total_tokens": 482
+  },
+  "basic_rag": {
+    "pipeline": "Basic RAG",
+    "results": [
+      {
+        "pipeline_name": "Basic RAG",
+        "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+        "answer": "According to the context, there are multiple individuals considered as the \"fathers of AI\", including Marvin Minsky and John McCarthy. Marvin Minsky's key contributions include co-founding MIT's AI laboratory and writing extensively about AI and philosophy. However, the context does not provide a detailed list of his contributions. It does mention that he received many accolades and honors for his work, including the ACM Turing Award in 1969.",
+        "prompt_tokens": 918,
+        "completion_tokens": 88,
+        "total_tokens": 1006,
+        "latency_seconds": 0.826,
+        "cost_usd": 0.0,
+        "context_text": "[Source: History of artificial intelligence]\nThe history of artificial intelligence (AI) began in antiquity, with myths, stories, and rumors of artificial beings endowed with intelligence or consciousness by master craftsmen. The study of logic and formal reasoning from antiquity to the present led to the development of the programmable digital computer in the 1940s, a machine predicated on abstract mathematical reasoning. This device and the ideas behind it inspired scientists to begin discussing the possibility of building an electronic brain.\nThe field of AI research was founded at a workshop held on the campus of Dartmouth College in 1956. At the workshop, the first AI program, Logic Theorist, was presented by future Turing Awardee Allen Newell and future Nobel Laureate Herbert A. Simon, with help from J. C. Shaw. Attendees of the workshop became the leaders of AI research for decades. Many of them predicted that machines as intelligent as humans would exist within a generation. Th",
+        "context_tokens": 926,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "num_chunks": 5,
+          "top_k": 5,
+          "expected_answer": "John McCarthy is widely considered the father of artificial intelligence. He coined the term 'artificial intelligence' in 1956 at the Dartmouth Conference, developed the Lisp programming language, and made fundamental contributions to the field including the concept of time-sharing in computing.",
+          "question_index": 0
+        }
+      }
+    ],
+    "avg_tokens": 1006.0,
+    "avg_latency": 0.826,
+    "avg_cost": 0.0,
+    "total_tokens": 1006
+  },
+  "graphrag": {
+    "pipeline": "GraphRAG",
+    "results": [
+      {
+        "pipeline_name": "GraphRAG",
+        "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+        "answer": "Based on the provided context, it is not explicitly stated who is considered the \"father of artificial intelligence.\" However, the context does mention key figures in the development of artificial intelligence, such as Allen Newell and Herbert A. Simon, who presented the first AI program, Logic Theorist, at a workshop held on the campus of Dartmouth College in 1956.\n\nBut, in the broader context of artificial intelligence history, Alan Turing is often considered the father of artificial intelligence. He made significant contributions to the development of computer science, artificial intelligence, and formal reasoning. Some of his key contributions include:\n\n1. The Turing Machine: A mathematical model for computation that laid the foundation for the development of modern computers.\n2. The Turing Test: A measure of a machine's ability to exhibit intelligent behavior equivalent to, or indistinguishable from, that of a human.\n3. Codebreaking: Turing's work at the Government Code and Cypher School at Bletchley Park, where he helped crack the German Enigma code, contributed significantly to the Allied war effort.\n\nWhile the provided context does not explicitly mention Alan Turing, his contributions to the field of artificial intelligence are widely recognized, and he is often credited as the father of artificial intelligence.",
+        "prompt_tokens": 297,
+        "completion_tokens": 252,
+        "total_tokens": 549,
+        "latency_seconds": 15.075,
+        "cost_usd": 0.0,
+        "context_text": "[Source: History of artificial intelligence]\nThe history of artificial intelligence (AI) began in antiquity, with myths, stories, and rumors of artificial beings endowed with intelligence or consciousness by master craftsmen. The study of logic and formal reasoning from antiquity to the present led to the development of the programmable digital computer in the 1940s, a machine predicated on abstract mathematical reasoning. This device and the ideas behind it inspired scientists to begin discussing the possibility of building an electronic brain.\nThe field of AI research was founded at a workshop held on the campus of Dartmouth College in 1956. At the workshop, the first AI program, Logic Theorist, was presented by future Turing Awardee Allen Newell and future Nobel Laureate Herbert A. Simon, with help from J. C. Shaw. Attendees of the workshop became the leaders of AI research for decades. Many of them predicted that machines as intelligent as humans would exist within a generation. Th",
+        "context_tokens": 250,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "method": "hybrid_fallback",
+          "top_k": 5,
+          "fallback_activated": true,
+          "expected_answer": "John McCarthy is widely considered the father of artificial intelligence. He coined the term 'artificial intelligence' in 1956 at the Dartmouth Conference, developed the Lisp programming language, and made fundamental contributions to the field including the concept of time-sharing in computing.",
+          "question_index": 0
+        }
+      }
+    ],
+    "avg_tokens": 549.0,
+    "avg_latency": 15.075,
+    "avg_cost": 0.0,
+    "total_tokens": 549
+  },
+  "judge": {
+    "llm_only": {
+      "pipeline": "LLM-Only",
+      "total_questions": 1,
+      "pass_count": 1,
+      "fail_count": 0,
+      "pass_rate": 1.0,
+      "meets_bonus_threshold": true,
+      "judgments": [
+        {
+          "verdict": "PASS",
+          "score": 1.0,
+          "reasoning": "The predicted answer is largely correct and covers most key points. It accurately identifies John McCarthy as the father of artificial intelligence and lists his key contributions, including coining the term 'artificial intelligence', developing the Lisp programming language, introducing the concept of time-sharing, and organizing the first AI conference. The answer also mentions McCarthy's advocacy for AI research and its potential to benefit society. While the predicted answer provides more de",
+          "confidence": "HIGH",
+          "raw_response": "VERDICT: PASS\nREASONING: The predicted answer is largely correct and covers most key points. It accurately identifies John McCarthy as the father of artificial intelligence and lists his key contributions, including coining the term 'artificial intelligence', developing the Lisp programming language, introducing the concept of time-sharing, and organizing the first AI conference. The answer also mentions McCarthy's advocacy for AI research and its potential to benefit society. While the predicted answer provides more detailed information than the expected answer, it does not contain any major factual errors and covers the essential points.\nCONFIDENCE: HIGH",
+          "judge_source": "groq",
+          "judge_model": "llama-3.1-8b-instant",
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "pipeline": "LLM-Only"
+        }
+      ]
+    },
+    "basic_rag": {
+      "pipeline": "Basic RAG",
+      "total_questions": 1,
+      "pass_count": 1,
+      "fail_count": 0,
+      "pass_rate": 1.0,
+      "meets_bonus_threshold": true,
+      "judgments": [
+        {
+          "verdict": "PASS",
+          "score": 1.0,
+          "reasoning": "The predicted answer is largely correct in terms of factual accuracy, as it mentions John McCarthy as one of the \"fathers of AI\" and Marvin Minsky as another key figure. It also correctly identifies some of Minsky's key contributions, such as co-founding MIT's AI laboratory and receiving the ACM Turing Award in 1969. However, it does not provide a detailed list of Minsky's contributions, which is a minor omission. The answer also correctly addresses the question, providing relevant information a",
+          "confidence": "HIGH",
+          "raw_response": "VERDICT: PASS\nREASONING: The predicted answer is largely correct in terms of factual accuracy, as it mentions John McCarthy as one of the \"fathers of AI\" and Marvin Minsky as another key figure. It also correctly identifies some of Minsky's key contributions, such as co-founding MIT's AI laboratory and receiving the ACM Turing Award in 1969. However, it does not provide a detailed list of Minsky's contributions, which is a minor omission. The answer also correctly addresses the question, providing relevant information about the key figures in the field of artificial intelligence.\nCONFIDENCE: HIGH",
+          "judge_source": "groq",
+          "judge_model": "llama-3.1-8b-instant",
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "pipeline": "Basic RAG"
+        }
+      ]
+    },
+    "graphrag": {
+      "pipeline": "GraphRAG",
+      "total_questions": 1,
+      "pass_count": 1,
+      "fail_count": 0,
+      "pass_rate": 1.0,
+      "meets_bonus_threshold": true,
+      "judgments": [
+        {
+          "verdict": "PASS",
+          "score": 1.0,
+          "reasoning": "The predicted answer is largely correct in terms of factual accuracy, covering key points such as Alan Turing's contributions to the development of computer science, artificial intelligence, and formal reasoning. However, it fails to address the specific question about who is considered the father of artificial intelligence in the context provided, which actually points to John McCarthy. Nevertheless, the predicted answer correctly identifies Alan Turing as a key figure in the history of artific",
+          "confidence": "MEDIUM",
+          "raw_response": "VERDICT: PASS\nREASONING: The predicted answer is largely correct in terms of factual accuracy, covering key points such as Alan Turing's contributions to the development of computer science, artificial intelligence, and formal reasoning. However, it fails to address the specific question about who is considered the father of artificial intelligence in the context provided, which actually points to John McCarthy. Nevertheless, the predicted answer correctly identifies Alan Turing as a key figure in the history of artificial intelligence and highlights his significant contributions. The minor omission regarding John McCarthy's role as the father of artificial intelligence does not significantly impact the overall accuracy of the predicted answer.\nCONFIDENCE: MEDIUM",
+          "judge_source": "groq",
+          "judge_model": "llama-3.1-8b-instant",
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "pipeline": "GraphRAG"
+        }
+      ]
+    }
+  },
+  "bertscore": {
+    "llm_only": {
+      "precision_scores": [
+        0.009558298625051975
+      ],
+      "recall_scores": [
+        0.5504952073097229
+      ],
+      "f1_scores": [
+        0.2672033905982971
+      ],
+      "f1_raw_scores": [
+        0.8763228058815002
+      ],
+      "avg_precision": 0.0096,
+      "avg_recall": 0.5505,
+      "avg_f1_rescaled": 0.2672,
+      "avg_f1_raw": 0.8763,
+      "model": "roberta-large",
+      "meets_bonus_f1_rescaled": false,
+      "meets_bonus_f1_raw": false,
+      "pipeline": "LLM-Only",
+      "total_questions": 1,
+      "per_question": [
+        {
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "f1_rescaled": 0.2672,
+          "f1_raw": 0.8763,
+          "precision": 0.0096,
+          "recall": 0.5505
+        }
+      ]
+    },
+    "basic_rag": {
+      "precision_scores": [
+        0.1980283409357071
+      ],
+      "recall_scores": [
+        0.3272859454154968
+      ],
+      "f1_scores": [
+        0.26305586099624634
+      ],
+      "f1_raw_scores": [
+        0.8756228089332581
+      ],
+      "avg_precision": 0.198,
+      "avg_recall": 0.3273,
+      "avg_f1_rescaled": 0.2631,
+      "avg_f1_raw": 0.8756,
+      "model": "roberta-large",
+      "meets_bonus_f1_rescaled": false,
+      "meets_bonus_f1_raw": false,
+      "pipeline": "Basic RAG",
+      "total_questions": 1,
+      "per_question": [
+        {
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "f1_rescaled": 0.2631,
+          "f1_raw": 0.8756,
+          "precision": 0.198,
+          "recall": 0.3273
+        }
+      ]
+    },
+    "graphrag": {
+      "precision_scores": [
+        0.05532599240541458
+      ],
+      "recall_scores": [
+        0.3674679696559906
+      ],
+      "f1_scores": [
+        0.20795942842960358
+      ],
+      "f1_raw_scores": [
+        0.8663239479064941
+      ],
+      "avg_precision": 0.0553,
+      "avg_recall": 0.3675,
+      "avg_f1_rescaled": 0.208,
+      "avg_f1_raw": 0.8663,
+      "model": "roberta-large",
+      "meets_bonus_f1_rescaled": false,
+      "meets_bonus_f1_raw": false,
+      "pipeline": "GraphRAG",
+      "total_questions": 1,
+      "per_question": [
+        {
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "f1_rescaled": 0.208,
+          "f1_raw": 0.8663,
+          "precision": 0.0553,
+          "recall": 0.3675
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "llm_only_avg_tokens": 482.0,
+    "basic_rag_avg_tokens": 1006.0,
+    "graphrag_avg_tokens": 549.0,
+    "token_reduction_vs_rag_pct": 45.43,
+    "token_reduction_vs_llm_pct": -13.9
+  },
+  "metadata": {
+    "timestamp": "2026-05-14T22:49:00.545717",
+    "num_questions": 1,
+    "llm_model": "llama-3.3-70b-versatile",
+    "rag_chunk_size": 1000,
+    "rag_top_k": 5,
+    "graphrag_method": "hybrid",
+    "graphrag_top_k": 5,
+    "graphrag_num_hops": 2,
+    "skip_graphrag": false
+  }
+}

@@ -1,0 +1,528 @@
+{
+  "llm_only": {
+    "pipeline": "LLM-Only",
+    "results": [
+      {
+        "pipeline_name": "LLM-Only",
+        "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+        "answer": "John McCarthy is widely considered the father of artificial intelligence (AI). He was an American computer scientist and cognitive scientist who made significant contributions to the field of AI. McCarthy's key contributions include:\n\n1. **Coining the term \"Artificial Intelligence\"**: McCarthy coined the term \"Artificial Intelligence\" in 1956, which marked the beginning of AI as a distinct field of research.\n2. **Organizing the Dartmouth Summer Research Project**: In 1956, McCarthy organized the Dartmouth Summer Research Project on Artificial Intelligence, which brought together leading researchers in the field, including Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This project is considered the birthplace of AI as a field of research.\n3. **Developing the Lisp programming language**: McCarthy developed the Lisp programming language, which became a fundamental tool for AI research. Lisp is a high-level, symbolic language that is well-suited for AI applications, such as natural language processing, computer vision, and expert systems.\n4. **Introducing the concept of time-sharing**: McCarthy introduced the concept of time-sharing, which allowed multiple users to access a computer system simultaneously. This innovation enabled the development of more efficient and interactive AI systems.\n5. **Advocating for the importance of symbolic reasoning**: McCarthy emphasized the importance of symbolic reasoning in AI, which involves using symbols and rules to represent and manipulate knowledge. This approach is still a fundamental aspect of many AI systems today.\n6. **Contributions to machine learning and knowledge representation**: McCarthy made significant contributions to machine learning and knowledge representation, including the development of the \"Advice Taker\" program, which was one of the first AI programs to use logical reasoning to solve problems.\n\nMcCarthy's work laid the foundation for the development of AI as a field of research, and his contributions continue to influence AI research and development to this day. He was awarded the Turing Award in 1971 for his contributions to the field of AI, and he is widely recognized as one of the most influential figures in the history of AI.",
+        "prompt_tokens": 69,
+        "completion_tokens": 412,
+        "total_tokens": 481,
+        "latency_seconds": 1.387,
+        "cost_usd": 0.0,
+        "context_text": "",
+        "context_tokens": 0,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "expected_answer": "John McCarthy is widely considered the father of artificial intelligence. He coined the term 'artificial intelligence' in 1956 at the Dartmouth Conference, developed the Lisp programming language, and made fundamental contributions to the field including the concept of time-sharing in computing.",
+          "question_index": 0
+        }
+      },
+      {
+        "pipeline_name": "LLM-Only",
+        "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+        "answer": "The Transformer architecture is a deep learning model introduced in 2017 by Vaswani et al. in the paper \"Attention Is All You Need.\" It revolutionized the field of Natural Language Processing (NLP) by providing a more efficient and effective way to handle sequential data, such as text.\n\n**Overview of the Transformer Architecture:**\n\nThe Transformer architecture is based on self-attention mechanisms, which allow the model to weigh the importance of different input elements (e.g., words or characters) relative to each other. This is different from traditional recurrent neural networks (RNNs) and convolutional neural networks (CNNs), which rely on recurrent connections or convolutional filters to process sequential data.\n\nThe Transformer architecture consists of an encoder and a decoder. The encoder takes in a sequence of input elements (e.g., words) and outputs a sequence of vectors. The decoder then generates the output sequence, one element at a time, based on the output vectors from the encoder.\n\n**Key Components of the Transformer Architecture:**\n\n1. **Self-Attention Mechanism:** The self-attention mechanism is the core component of the Transformer architecture. It allows the model to compute the representation of each input element by attending to all other input elements. This is done by computing the attention weights, which represent the importance of each input element relative to the others.\n2. **Multi-Head Attention:** The Transformer architecture uses multi-head attention, which allows the model to jointly attend to information from different representation subspaces at different positions. This is done by applying multiple attention mechanisms in parallel, each with a different set of learnable weights.\n3. **Positional Encoding:** Since the Transformer architecture does not use recurrent connections or convolutional filters, it needs a way to preserve the order of the input sequence. This is done by adding positional encoding to the input elements, which encodes the position of each element in the sequence.\n4. **Encoder-Decoder Structure:** The Transformer architecture uses an encoder-decoder structure, where the encoder takes in the input sequence and outputs a sequence of vectors, and the decoder generates the output sequence, one element at a time, based on the output vectors from the encoder.\n\n**Why the Transformer Architecture was Revolutionary:**\n\nThe Transformer architecture was revolutionary for NLP because it:\n\n1. **Improved Parallelization:** The Transformer architecture can be parallelized more easily than RNNs, which makes it much faster to train on large datasets.\n2. **Increased Accuracy:** The Transformer architecture achieved state-of-the-art results on many NLP tasks, such as machine translation, text classification, and question answering.\n3. **Reduced Computational Complexity:** The Transformer architecture has a lower computational complexity than RNNs, which makes it more efficient to train and deploy.\n4. **Enabled Pre-Training:** The Transformer architecture enabled pre-training, which allows the model to be trained on a large corpus of text and then fine-tuned on a specific task. This has led to the development of pre-trained language models, such as BERT and RoBERTa, which have achieved state-of-the-art results on many NLP tasks.\n\n**Impact of the Transformer Architecture:**\n\nThe Transformer architecture has had a significant impact on the field of NLP, leading to:\n\n1. **State-of-the-Art Results:** The Transformer architecture has achieved state-of-the-art results on many NLP tasks, such as machine translation, text classification, and question answering.\n2. **Pre-Trained Language Models:** The Transformer architecture has enabled the development of pre-trained language models, such as BERT and RoBERTa, which have achieved state-of-the-art results on many NLP tasks.\n3. **Advances in NLP:** The Transformer architecture has led to advances in NLP, such as the development of more accurate and efficient models for tasks like language translation, text summarization, and sentiment analysis.\n\nIn summary, the Transformer architecture is a revolutionary deep learning model that has transformed the field of NLP by providing a more efficient and effective way to handle sequential data. Its self-attention mechanism, multi-head attention, and encoder-decoder structure have made it a powerful tool for many NLP tasks, and its impact will continue to be felt in the years to come.",
+        "prompt_tokens": 70,
+        "completion_tokens": 856,
+        "total_tokens": 926,
+        "latency_seconds": 2.103,
+        "cost_usd": 0.0,
+        "context_text": "",
+        "context_tokens": 0,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "expected_answer": "The transformer architecture, introduced in the 2017 paper 'Attention Is All You Need' by Vaswani et al., uses self-attention mechanisms to process all positions in a sequence simultaneously rather than sequentially. This parallel processing was revolutionary because it enabled much faster training, better handling of long-range dependencies, and led to breakthroughs like BERT, GPT, and modern large language models.",
+          "question_index": 1
+        }
+      },
+      {
+        "pipeline_name": "LLM-Only",
+        "question": "What is the relationship between Geoffrey Hinton, Yann LeCun, and Yoshua Bengio in the development of deep learning?",
+        "answer": "Geoffrey Hinton, Yann LeCun, and Yoshua Bengio are three prominent researchers who played a crucial role in the development of deep learning. They are often referred to as the \"Godfathers of Deep Learning\" or the \"Deep Learning Trio.\" Their relationship is one of collaboration, mutual respect, and a shared passion for advancing the field of artificial intelligence.\n\nIn the 1980s and 1990s, Hinton, LeCun, and Bengio worked independently on various aspects of neural networks, which are the foundation of deep learning. They each made significant contributions to the field, but their work was not widely recognized or adopted at the time.\n\nHinton, a Canadian computer scientist, is known for his work on backpropagation, a key algorithm for training neural networks. He also developed the concept of distributed representations, which is a fundamental idea in deep learning.\n\nLeCun, a French computer scientist, worked on the development of convolutional neural networks (CNNs), which are a type of neural network particularly well-suited for image recognition tasks. He also developed the LeNet-1 and LeNet-5 neural network architectures, which were among the first to use convolutional and pooling layers.\n\nBengio, a Canadian computer scientist, worked on the development of recurrent neural networks (RNNs), which are a type of neural network particularly well-suited for sequential data such as speech, text, and time series data. He also developed the concept of long short-term memory (LSTM) networks, which are a type of RNN that can learn long-term dependencies in data.\n\nIn the early 2000s, Hinton, LeCun, and Bengio began to collaborate and share their ideas with each other. They realized that their individual contributions could be combined to create more powerful and generalizable neural network architectures. This collaboration led to the development of modern deep learning techniques, including the use of rectified linear units (ReLUs), dropout regularization, and batch normalization.\n\nThe trio's work together culminated in the publication of a seminal paper in 2007, \"A Fast Learning Algorithm for Deep Belief Nets,\" which introduced the concept of deep belief networks and demonstrated the power of deep learning for image recognition tasks. This paper is often credited with launching the deep learning revolution, which has since transformed the field of artificial intelligence and had a significant impact on many areas of science and industry.\n\nIn 2018, Hinton, LeCun, and Bengio were awarded the Turing Award, often referred to as the \"Nobel Prize of Computing,\" for their contributions to the development of deep learning. Their work has had a profound impact on the field of artificial intelligence, and their collaboration and friendship have inspired a new generation of researchers and practitioners in the field.",
+        "prompt_tokens": 81,
+        "completion_tokens": 570,
+        "total_tokens": 651,
+        "latency_seconds": 2.334,
+        "cost_usd": 0.0,
+        "context_text": "",
+        "context_tokens": 0,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "expected_answer": "Geoffrey Hinton, Yann LeCun, and Yoshua Bengio are known as the 'Godfathers of Deep Learning' and jointly received the 2018 Turing Award. Hinton pioneered backpropagation and deep belief networks, LeCun developed convolutional neural networks (LeNet), and Bengio advanced recurrent neural networks and generative adversarial networks. Their collective work laid the foundation for modern deep learning.",
+          "question_index": 2
+        }
+      }
+    ],
+    "avg_tokens": 686.0,
+    "avg_latency": 1.9413333333333334,
+    "avg_cost": 0.0,
+    "total_tokens": 2058
+  },
+  "basic_rag": {
+    "pipeline": "Basic RAG",
+    "results": [
+      {
+        "pipeline_name": "Basic RAG",
+        "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+        "answer": "According to the context, there are multiple individuals considered as the \"fathers of AI\", including Marvin Minsky and John McCarthy. Marvin Minsky's key contributions include co-founding MIT's AI laboratory and writing extensively about AI and philosophy. However, the context does not provide a detailed list of his contributions. It only mentions that he received many accolades and honors for his work, including the ACM Turing Award in 1969.",
+        "prompt_tokens": 918,
+        "completion_tokens": 88,
+        "total_tokens": 1006,
+        "latency_seconds": 0.884,
+        "cost_usd": 0.0,
+        "context_text": "[Source: History of artificial intelligence]\nThe history of artificial intelligence (AI) began in antiquity, with myths, stories, and rumors of artificial beings endowed with intelligence or consciousness by master craftsmen. The study of logic and formal reasoning from antiquity to the present led to the development of the programmable digital computer in the 1940s, a machine predicated on abstract mathematical reasoning. This device and the ideas behind it inspired scientists to begin discussing the possibility of building an electronic brain.\nThe field of AI research was founded at a workshop held on the campus of Dartmouth College in 1956. At the workshop, the first AI program, Logic Theorist, was presented by future Turing Awardee Allen Newell and future Nobel Laureate Herbert A. Simon, with help from J. C. Shaw. Attendees of the workshop became the leaders of AI research for decades. Many of them predicted that machines as intelligent as humans would exist within a generation. Th",
+        "context_tokens": 926,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "num_chunks": 5,
+          "top_k": 5,
+          "expected_answer": "John McCarthy is widely considered the father of artificial intelligence. He coined the term 'artificial intelligence' in 1956 at the Dartmouth Conference, developed the Lisp programming language, and made fundamental contributions to the field including the concept of time-sharing in computing.",
+          "question_index": 0
+        }
+      },
+      {
+        "pipeline_name": "Basic RAG",
+        "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+        "answer": "The transformer architecture works by using a multi-head attention model that allows it to process all tokens in parallel, while preserving its dot-product attention mechanism. This is achieved through the use of independent heads and the lack of recurrence, making it easier to parallelize. The architecture consists of an embedding layer, transformer layers (which carry out repeated transformations on the vector representations), and an un-embedding layer (which converts the final vector representations back to a probability distribution over the tokens).\n\nThe transformer architecture was revolutionary for natural language processing because it allowed for the development of large-scale language models that could learn and model complex patterns in language. Its parallelizability was an important factor in its widespread use, as it enabled the training of large neural networks. The transformer architecture has been used in a variety of applications, including language modeling, machine translation, and text generation, and has been instrumental in the development of modern large language models such as ChatGPT, GPT-4, and BERT.\n\nThe transformer architecture was introduced in the 2017 paper \"Attention Is All You Need\" and has since become the model of choice for natural language processing. Its ability to learn and model complex patterns in language has led to significant improvements in tasks such as language translation, text generation, and question answering. The transformer architecture has also been used in other areas, such as computer vision, reinforcement learning, and audio processing, and has been widely adopted in the field of artificial intelligence.",
+        "prompt_tokens": 1083,
+        "completion_tokens": 293,
+        "total_tokens": 1376,
+        "latency_seconds": 1.34,
+        "cost_usd": 0.0,
+        "context_text": "[Source: Neural network (machine learning)]\neural network (ResNet) in December 2015. ResNet behaves like an open-gated Highway Net.\n\nTransformers\nDuring the 2010s, the seq2seq model was developed, and attention mechanisms were added. It led to the modern transformer architecture in 2017 in Attention Is All You Need.\nIt requires computation time that is quadratic in the size of the context window. Jürgen Schmidhuber's fast weight controller (1992) scales linearly and was later shown to be equivalent to the unnormalized linear transformer.\nTransformers have increasingly become the model of choice for natural language processing. Many modern large language models such as ChatGPT, GPT-4, and BERT use this architecture.\n\nModels\nANNs began as an attempt to exploit the architecture of the human brain to perform tasks that conventional algorithms had little success with. They soon reoriented towards improving empirical results, abandoning attempts to remain true to their biological precursors.",
+        "context_tokens": 1300,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "num_chunks": 5,
+          "top_k": 5,
+          "expected_answer": "The transformer architecture, introduced in the 2017 paper 'Attention Is All You Need' by Vaswani et al., uses self-attention mechanisms to process all positions in a sequence simultaneously rather than sequentially. This parallel processing was revolutionary because it enabled much faster training, better handling of long-range dependencies, and led to breakthroughs like BERT, GPT, and modern large language models.",
+          "question_index": 1
+        }
+      },
+      {
+        "pipeline_name": "Basic RAG",
+        "question": "What is the relationship between Geoffrey Hinton, Yann LeCun, and Yoshua Bengio in the development of deep learning?",
+        "answer": "According to the context, Geoffrey Hinton, Yann LeCun, and Yoshua Bengio are referred to as the \"Godfathers of Deep Learning\" and have worked together in the development of deep learning. They were jointly awarded the 2018 Turing Award for their work on deep learning. This suggests a collaborative and influential relationship between the three in the field of deep learning.",
+        "prompt_tokens": 1232,
+        "completion_tokens": 79,
+        "total_tokens": 1311,
+        "latency_seconds": 0.613,
+        "cost_usd": 0.0,
+        "context_text": "[Source: Yann LeCun]\n Bottou.\nIn 2018, LeCun, Yoshua Bengio, and Geoffrey Hinton received the Turing Award from the Association for Computing Machinery (ACM) for their work on deep learning. LeCun, Bengio, and Hinton, and occasionally Jürgen Schmidhuber, are sometimes referred to as the \"Godfathers of AI\" and \"Godfathers of Deep Learning\".\n\nEarly life and education\nYann André Le Cun was born on 8 July 1960 at Soisy-sous-Montmorency, in the suburbs of Paris. His surname, Le Cun, derives from the old Breton form Le Cunff and originates from the region of Guingamp in northern Brittany. Yann is the Breton form of Jean, the French form of John.\nHe received a Diplôme d'Ingénieur from the ESIEE Paris in 1983 and a PhD in computer science from Université Pierre et Marie Curie (now Sorbonne University) in 1987, during which he proposed an early form of backpropagation, an algorithm crucial for enabling neural networks to learn. Before joining AT&T, LeCun was a postdoctoral researcher for a year",
+        "context_tokens": 1208,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "num_chunks": 5,
+          "top_k": 5,
+          "expected_answer": "Geoffrey Hinton, Yann LeCun, and Yoshua Bengio are known as the 'Godfathers of Deep Learning' and jointly received the 2018 Turing Award. Hinton pioneered backpropagation and deep belief networks, LeCun developed convolutional neural networks (LeNet), and Bengio advanced recurrent neural networks and generative adversarial networks. Their collective work laid the foundation for modern deep learning.",
+          "question_index": 2
+        }
+      }
+    ],
+    "avg_tokens": 1231.0,
+    "avg_latency": 0.9456666666666668,
+    "avg_cost": 0.0,
+    "total_tokens": 3693
+  },
+  "graphrag": {
+    "pipeline": "GraphRAG",
+    "results": [
+      {
+        "pipeline_name": "GraphRAG",
+        "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+        "answer": "Based on the provided context, it is not explicitly stated who is considered the \"father of artificial intelligence.\" However, the context does mention key figures in the development of artificial intelligence, such as Allen Newell, Herbert A. Simon, and J. C. Shaw, who presented the first AI program, Logic Theorist, at the 1956 workshop at Dartmouth College.\n\nBut, in the broader context of artificial intelligence history, Alan Turing and Marvin Minsky, along with John McCarthy, are often referred to as the founders or fathers of artificial intelligence. \n\nJohn McCarthy, who organized the 1956 Dartmouth workshop, is often specifically referred to as the \"father of artificial intelligence\" due to his role in coining the term \"artificial intelligence\" and his efforts in establishing the field as a distinct area of research.\n\nKey contributions of these pioneers include:\n\n1. **Logic Theorist**: Developed by Allen Newell and Herbert A. Simon, this was the first AI program, which demonstrated the power of using logical reasoning to solve problems.\n2. **Turing Test**: Proposed by Alan Turing, this test measures a machine's ability to exhibit intelligent behavior equivalent to, or indistinguishable from, that of a human.\n3. **Establishing the field**: John McCarthy's organization of the 1956 Dartmouth workshop and his coining of the term \"artificial intelligence\" helped establish the field as a distinct area of research.\n\nWhile the provided context does not directly answer the question, it does highlight the contributions of key figures in the development of artificial intelligence.",
+        "prompt_tokens": 297,
+        "completion_tokens": 320,
+        "total_tokens": 617,
+        "latency_seconds": 19.775,
+        "cost_usd": 0.0,
+        "context_text": "[Source: History of artificial intelligence]\nThe history of artificial intelligence (AI) began in antiquity, with myths, stories, and rumors of artificial beings endowed with intelligence or consciousness by master craftsmen. The study of logic and formal reasoning from antiquity to the present led to the development of the programmable digital computer in the 1940s, a machine predicated on abstract mathematical reasoning. This device and the ideas behind it inspired scientists to begin discussing the possibility of building an electronic brain.\nThe field of AI research was founded at a workshop held on the campus of Dartmouth College in 1956. At the workshop, the first AI program, Logic Theorist, was presented by future Turing Awardee Allen Newell and future Nobel Laureate Herbert A. Simon, with help from J. C. Shaw. Attendees of the workshop became the leaders of AI research for decades. Many of them predicted that machines as intelligent as humans would exist within a generation. Th",
+        "context_tokens": 250,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "method": "hybrid_fallback",
+          "top_k": 5,
+          "fallback_activated": true,
+          "expected_answer": "John McCarthy is widely considered the father of artificial intelligence. He coined the term 'artificial intelligence' in 1956 at the Dartmouth Conference, developed the Lisp programming language, and made fundamental contributions to the field including the concept of time-sharing in computing.",
+          "question_index": 0
+        }
+      },
+      {
+        "pipeline_name": "GraphRAG",
+        "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+        "answer": "The transformer architecture, introduced in 2017, revolutionized natural language processing (NLP) by leveraging attention mechanisms to enable parallelization and reduce computational complexity. Unlike traditional recurrent neural networks (RNNs) and convolutional neural networks (CNNs), transformers rely solely on self-attention mechanisms to process input sequences.\n\nThe transformer architecture works by:\n\n1. **Tokenization**: Breaking down input text into individual tokens, such as words or subwords.\n2. **Embedding**: Converting each token into a vector representation, called an embedding, which captures its semantic meaning.\n3. **Self-Attention**: Applying self-attention mechanisms to the input embeddings, allowing the model to weigh the importance of different tokens relative to each other.\n4. **Encoder-Decoder Structure**: Using an encoder to process the input sequence and a decoder to generate the output sequence.\n\nThe transformer architecture was revolutionary for NLP because it:\n\n1. **Scales linearly**: Unlike traditional attention mechanisms, which require computation time quadratic in the size of the context window, transformers can be parallelized, making them more efficient for large-scale NLP tasks.\n2. **Improves performance**: Transformers have achieved state-of-the-art results in various NLP tasks, such as machine translation, text classification, and language modeling.\n3. **Enables large language models**: The transformer architecture has enabled the development of large language models like ChatGPT, GPT-4, and BERT, which have achieved remarkable results in NLP tasks.\n\nThe transformer architecture's ability to efficiently process long-range dependencies and capture complex contextual relationships has made it the model of choice for many NLP applications. Its impact on the field has been significant, and it continues to be a key area of research and development in NLP.",
+        "prompt_tokens": 300,
+        "completion_tokens": 359,
+        "total_tokens": 659,
+        "latency_seconds": 23.55,
+        "cost_usd": 0.0,
+        "context_text": "[Source: Neural network (machine learning)]\neural network (ResNet) in December 2015. ResNet behaves like an open-gated Highway Net.\n\nTransformers\nDuring the 2010s, the seq2seq model was developed, and attention mechanisms were added. It led to the modern transformer architecture in 2017 in Attention Is All You Need.\nIt requires computation time that is quadratic in the size of the context window. Jürgen Schmidhuber's fast weight controller (1992) scales linearly and was later shown to be equivalent to the unnormalized linear transformer.\nTransformers have increasingly become the model of choice for natural language processing. Many modern large language models such as ChatGPT, GPT-4, and BERT use this architecture.\n\nModels\nANNs began as an attempt to exploit the architecture of the human brain to perform tasks that conventional algorithms had little success with. They soon reoriented towards improving empirical results, abandoning attempts to remain true to their biological precursors.",
+        "context_tokens": 250,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "method": "hybrid_fallback",
+          "top_k": 5,
+          "fallback_activated": true,
+          "expected_answer": "The transformer architecture, introduced in the 2017 paper 'Attention Is All You Need' by Vaswani et al., uses self-attention mechanisms to process all positions in a sequence simultaneously rather than sequentially. This parallel processing was revolutionary because it enabled much faster training, better handling of long-range dependencies, and led to breakthroughs like BERT, GPT, and modern large language models.",
+          "question_index": 1
+        }
+      },
+      {
+        "pipeline_name": "GraphRAG",
+        "question": "What is the relationship between Geoffrey Hinton, Yann LeCun, and Yoshua Bengio in the development of deep learning?",
+        "answer": "According to the context, Geoffrey Hinton, Yann LeCun, and Yoshua Bengio are collectively referred to as the \"Godfathers of AI\" and \"Godfathers of Deep Learning\" due to their significant contributions to the development of deep learning. In 2018, they received the Turing Award from the Association for Computing Machinery (ACM) for their work on deep learning, indicating that they have collaborated or made individual contributions that have collectively advanced the field of deep learning. This suggests a relationship of mutual recognition and respect as pioneers in the field, with their work building upon or complementing each other's research.",
+        "prompt_tokens": 303,
+        "completion_tokens": 129,
+        "total_tokens": 432,
+        "latency_seconds": 19.353,
+        "cost_usd": 0.0,
+        "context_text": "[Source: Yann LeCun]\n Bottou.\nIn 2018, LeCun, Yoshua Bengio, and Geoffrey Hinton received the Turing Award from the Association for Computing Machinery (ACM) for their work on deep learning. LeCun, Bengio, and Hinton, and occasionally Jürgen Schmidhuber, are sometimes referred to as the \"Godfathers of AI\" and \"Godfathers of Deep Learning\".\n\nEarly life and education\nYann André Le Cun was born on 8 July 1960 at Soisy-sous-Montmorency, in the suburbs of Paris. His surname, Le Cun, derives from the old Breton form Le Cunff and originates from the region of Guingamp in northern Brittany. Yann is the Breton form of Jean, the French form of John.\nHe received a Diplôme d'Ingénieur from the ESIEE Paris in 1983 and a PhD in computer science from Université Pierre et Marie Curie (now Sorbonne University) in 1987, during which he proposed an early form of backpropagation, an algorithm crucial for enabling neural networks to learn. Before joining AT&T, LeCun was a postdoctoral researcher for a year",
+        "context_tokens": 250,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "method": "hybrid_fallback",
+          "top_k": 5,
+          "fallback_activated": true,
+          "expected_answer": "Geoffrey Hinton, Yann LeCun, and Yoshua Bengio are known as the 'Godfathers of Deep Learning' and jointly received the 2018 Turing Award. Hinton pioneered backpropagation and deep belief networks, LeCun developed convolutional neural networks (LeNet), and Bengio advanced recurrent neural networks and generative adversarial networks. Their collective work laid the foundation for modern deep learning.",
+          "question_index": 2
+        }
+      }
+    ],
+    "avg_tokens": 569.3333333333334,
+    "avg_latency": 20.892666666666667,
+    "avg_cost": 0.0,
+    "total_tokens": 1708
+  },
+  "judge": {
+    "llm_only": {
+      "pipeline": "LLM-Only",
+      "total_questions": 3,
+      "pass_count": 3,
+      "fail_count": 0,
+      "pass_rate": 1.0,
+      "meets_bonus_threshold": true,
+      "judgments": [
+        {
+          "verdict": "PASS",
+          "score": 1.0,
+          "reasoning": "The predicted answer is largely correct and covers most key points. It accurately identifies John McCarthy as the father of artificial intelligence and lists his key contributions, including coining the term 'artificial intelligence', developing the Lisp programming language, introducing the concept of time-sharing, and advocating for symbolic reasoning. The answer also mentions his contributions to machine learning and knowledge representation, which is a minor but relevant point. The only mino",
+          "confidence": "HIGH",
+          "raw_response": "VERDICT: PASS\nREASONING: The predicted answer is largely correct and covers most key points. It accurately identifies John McCarthy as the father of artificial intelligence and lists his key contributions, including coining the term 'artificial intelligence', developing the Lisp programming language, introducing the concept of time-sharing, and advocating for symbolic reasoning. The answer also mentions his contributions to machine learning and knowledge representation, which is a minor but relevant point. The only minor difference is that the expected answer does not mention the Dartmouth Summer Research Project as a separate point, but rather as the context where McCarthy coined the term 'artificial intelligence'. Overall, the predicted answer is a comprehensive and accurate summary of M",
+          "judge_source": "groq",
+          "judge_model": "llama-3.1-8b-instant",
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "pipeline": "LLM-Only"
+        },
+        {
+          "verdict": "PASS",
+          "score": 1.0,
+          "reasoning": "The predicted answer is largely correct and covers most key points. It accurately describes the Transformer architecture, its components, and its impact on NLP. The predicted answer also mentions the key benefits of the Transformer architecture, such as improved parallelization, increased accuracy, and reduced computational complexity. However, it does not provide as much detail as the expected answer, and some points are mentioned briefly or are not explicitly stated. Nevertheless, the predicte",
+          "confidence": "HIGH",
+          "raw_response": "VERDICT: PASS\nREASONING: The predicted answer is largely correct and covers most key points. It accurately describes the Transformer architecture, its components, and its impact on NLP. The predicted answer also mentions the key benefits of the Transformer architecture, such as improved parallelization, increased accuracy, and reduced computational complexity. However, it does not provide as much detail as the expected answer, and some points are mentioned briefly or are not explicitly stated. Nevertheless, the predicted answer captures the essence of the Transformer architecture and its significance in NLP.\nCONFIDENCE: HIGH",
+          "judge_source": "groq",
+          "judge_model": "llama-3.1-8b-instant",
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+          "pipeline": "LLM-Only"
+        },
+        {
+          "verdict": "PASS",
+          "score": 1.0,
+          "reasoning": "The predicted answer is largely correct and covers most key points. It accurately describes the relationship between Geoffrey Hinton, Yann LeCun, and Yoshua Bengio in the development of deep learning, including their individual contributions and their collaborative work. The answer also mentions their joint Turing Award and the impact of their work on the field of artificial intelligence. While the predicted answer provides more detailed information than the expected answer, it does not contain ",
+          "confidence": "HIGH",
+          "raw_response": "VERDICT: PASS\nREASONING: The predicted answer is largely correct and covers most key points. It accurately describes the relationship between Geoffrey Hinton, Yann LeCun, and Yoshua Bengio in the development of deep learning, including their individual contributions and their collaborative work. The answer also mentions their joint Turing Award and the impact of their work on the field of artificial intelligence. While the predicted answer provides more detailed information than the expected answer, it does not contain any major factual errors and covers the essential points.\nCONFIDENCE: HIGH",
+          "judge_source": "groq",
+          "judge_model": "llama-3.1-8b-instant",
+          "question_index": 2,
+          "question": "What is the relationship between Geoffrey Hinton, Yann LeCun, and Yoshua Bengio in the development of deep learning?",
+          "pipeline": "LLM-Only"
+        }
+      ]
+    },
+    "basic_rag": {
+      "pipeline": "Basic RAG",
+      "total_questions": 3,
+      "pass_count": 3,
+      "fail_count": 0,
+      "pass_rate": 1.0,
+      "meets_bonus_threshold": true,
+      "judgments": [
+        {
+          "verdict": "PASS",
+          "score": 1.0,
+          "reasoning": "The predicted answer is largely correct in terms of factual accuracy, as it correctly identifies Marvin Minsky and John McCarthy as key figures in the field of artificial intelligence. However, it does not fully address the question by not providing a clear answer to who is considered the \"father of artificial intelligence\" and instead presents multiple individuals. Nevertheless, it covers the key points of Marvin Minsky's contributions, including his co-founding of MIT's AI laboratory and his w",
+          "confidence": "MEDIUM",
+          "raw_response": "VERDICT: PASS\nREASONING: The predicted answer is largely correct in terms of factual accuracy, as it correctly identifies Marvin Minsky and John McCarthy as key figures in the field of artificial intelligence. However, it does not fully address the question by not providing a clear answer to who is considered the \"father of artificial intelligence\" and instead presents multiple individuals. Nevertheless, it covers the key points of Marvin Minsky's contributions, including his co-founding of MIT's AI laboratory and his work on AI and philosophy. The answer also correctly mentions his accolades, including the ACM Turing Award in 1969.\nCONFIDENCE: MEDIUM",
+          "judge_source": "groq",
+          "judge_model": "llama-3.1-8b-instant",
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "pipeline": "Basic RAG"
+        },
+        {
+          "verdict": "PASS",
+          "score": 1.0,
+          "reasoning": "The predicted answer is largely correct and covers most key points. It accurately describes the transformer architecture's use of self-attention mechanisms, its parallelizability, and its impact on natural language processing. The predicted answer also mentions the key paper \"Attention Is All You Need\" and the breakthroughs it led to, such as BERT and GPT. However, it does not explicitly mention the handling of long-range dependencies as a key benefit of the transformer architecture, which is me",
+          "confidence": "HIGH",
+          "raw_response": "VERDICT: PASS\nREASONING: The predicted answer is largely correct and covers most key points. It accurately describes the transformer architecture's use of self-attention mechanisms, its parallelizability, and its impact on natural language processing. The predicted answer also mentions the key paper \"Attention Is All You Need\" and the breakthroughs it led to, such as BERT and GPT. However, it does not explicitly mention the handling of long-range dependencies as a key benefit of the transformer architecture, which is mentioned in the expected answer. Nevertheless, this is a minor omission, and the predicted answer overall provides a clear and accurate description of the transformer architecture and its significance.\nCONFIDENCE: HIGH",
+          "judge_source": "groq",
+          "judge_model": "llama-3.1-8b-instant",
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+          "pipeline": "Basic RAG"
+        },
+        {
+          "verdict": "PASS",
+          "score": 1.0,
+          "reasoning": "The predicted answer accurately captures the relationship between Geoffrey Hinton, Yann LeCun, and Yoshua Bengio in the development of deep learning. It correctly identifies them as the 'Godfathers of Deep Learning' and mentions their joint receipt of the 2018 Turing Award. Although it does not explicitly mention their individual contributions to deep learning, it implies their collaborative work and influence in the field. This is sufficient to cover the key points and demonstrate a good unders",
+          "confidence": "HIGH",
+          "raw_response": "VERDICT: PASS\nREASONING: The predicted answer accurately captures the relationship between Geoffrey Hinton, Yann LeCun, and Yoshua Bengio in the development of deep learning. It correctly identifies them as the 'Godfathers of Deep Learning' and mentions their joint receipt of the 2018 Turing Award. Although it does not explicitly mention their individual contributions to deep learning, it implies their collaborative work and influence in the field. This is sufficient to cover the key points and demonstrate a good understanding of the topic.\nCONFIDENCE: HIGH",
+          "judge_source": "groq",
+          "judge_model": "llama-3.1-8b-instant",
+          "question_index": 2,
+          "question": "What is the relationship between Geoffrey Hinton, Yann LeCun, and Yoshua Bengio in the development of deep learning?",
+          "pipeline": "Basic RAG"
+        }
+      ]
+    },
+    "graphrag": {
+      "pipeline": "GraphRAG",
+      "total_questions": 3,
+      "pass_count": 2,
+      "fail_count": 1,
+      "pass_rate": 0.6667,
+      "meets_bonus_threshold": false,
+      "judgments": [
+        {
+          "verdict": "FAIL",
+          "score": 0.0,
+          "reasoning": "The predicted answer has major factual errors and misses most key points. While it mentions John McCarthy as a key figure in the development of artificial intelligence, it fails to acknowledge him as the father of artificial intelligence, which is a crucial point. Additionally, it introduces irrelevant information about other pioneers and their contributions, which distracts from the main question. The predicted answer also fails to mention John McCarthy's development of the Lisp programming lan",
+          "confidence": "HIGH",
+          "raw_response": "VERDICT: FAIL\nREASONING: The predicted answer has major factual errors and misses most key points. While it mentions John McCarthy as a key figure in the development of artificial intelligence, it fails to acknowledge him as the father of artificial intelligence, which is a crucial point. Additionally, it introduces irrelevant information about other pioneers and their contributions, which distracts from the main question. The predicted answer also fails to mention John McCarthy's development of the Lisp programming language and his concept of time-sharing in computing, which are significant contributions to the field.\nCONFIDENCE: HIGH",
+          "judge_source": "groq",
+          "judge_model": "llama-3.1-8b-instant",
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "pipeline": "GraphRAG"
+        },
+        {
+          "verdict": "PASS",
+          "score": 1.0,
+          "reasoning": "The predicted answer is largely correct and covers most key points. It accurately describes the transformer architecture's use of self-attention mechanisms, its parallel processing capabilities, and its impact on natural language processing. The predicted answer also correctly identifies the key components of the transformer architecture, such as tokenization, embedding, self-attention, and the encoder-decoder structure. Additionally, it highlights the transformer's ability to scale linearly, im",
+          "confidence": "HIGH",
+          "raw_response": "VERDICT: PASS\nREASONING: The predicted answer is largely correct and covers most key points. It accurately describes the transformer architecture's use of self-attention mechanisms, its parallel processing capabilities, and its impact on natural language processing. The predicted answer also correctly identifies the key components of the transformer architecture, such as tokenization, embedding, self-attention, and the encoder-decoder structure. Additionally, it highlights the transformer's ability to scale linearly, improve performance, and enable large language models. However, it does not explicitly mention the 'Attention Is All You Need' paper, which is a minor omission.\nCONFIDENCE: HIGH",
+          "judge_source": "groq",
+          "judge_model": "llama-3.1-8b-instant",
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+          "pipeline": "GraphRAG"
+        },
+        {
+          "verdict": "PASS",
+          "score": 1.0,
+          "reasoning": "The predicted answer is largely correct in terms of factual accuracy, covering the key points of the relationship between Geoffrey Hinton, Yann LeCun, and Yoshua Bengio in the development of deep learning. It correctly identifies them as the \"Godfathers of Deep Learning,\" mentions their receipt of the 2018 Turing Award, and highlights their individual contributions to the field. However, it slightly deviates from the expected answer by referring to them as the \"Godfathers of AI\" in addition to d",
+          "confidence": "HIGH",
+          "raw_response": "VERDICT: PASS\nREASONING: The predicted answer is largely correct in terms of factual accuracy, covering the key points of the relationship between Geoffrey Hinton, Yann LeCun, and Yoshua Bengio in the development of deep learning. It correctly identifies them as the \"Godfathers of Deep Learning,\" mentions their receipt of the 2018 Turing Award, and highlights their individual contributions to the field. However, it slightly deviates from the expected answer by referring to them as the \"Godfathers of AI\" in addition to deep learning, which is not explicitly mentioned in the expected answer. Nevertheless, this minor variation does not significantly impact the overall accuracy and completeness of the predicted answer.\nCONFIDENCE: HIGH",
+          "judge_source": "groq",
+          "judge_model": "llama-3.1-8b-instant",
+          "question_index": 2,
+          "question": "What is the relationship between Geoffrey Hinton, Yann LeCun, and Yoshua Bengio in the development of deep learning?",
+          "pipeline": "GraphRAG"
+        }
+      ]
+    }
+  },
+  "bertscore": {
+    "llm_only": {
+      "precision_scores": [
+        0.012536157853901386,
+        -0.17661096155643463,
+        0.017363416031003
+      ],
+      "recall_scores": [
+        0.553303062915802,
+        0.3072584271430969,
+        0.4592198133468628
+      ],
+      "f1_scores": [
+        0.270108163356781,
+        0.055166371166706085,
+        0.23011893033981323
+      ],
+      "f1_raw_scores": [
+        0.8768130540847778,
+        0.8405364155769348,
+        0.8700639009475708
+      ],
+      "avg_precision": -0.0489,
+      "avg_recall": 0.4399,
+      "avg_f1_rescaled": 0.1851,
+      "avg_f1_raw": 0.8625,
+      "model": "roberta-large",
+      "meets_bonus_f1_rescaled": false,
+      "meets_bonus_f1_raw": false,
+      "pipeline": "LLM-Only",
+      "total_questions": 3,
+      "per_question": [
+        {
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "f1_rescaled": 0.2701,
+          "f1_raw": 0.8768,
+          "precision": 0.0125,
+          "recall": 0.5533
+        },
+        {
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language process",
+          "f1_rescaled": 0.0552,
+          "f1_raw": 0.8405,
+          "precision": -0.1766,
+          "recall": 0.3073
+        },
+        {
+          "question_index": 2,
+          "question": "What is the relationship between Geoffrey Hinton, Yann LeCun, and Yoshua Bengio in the development o",
+          "f1_rescaled": 0.2301,
+          "f1_raw": 0.8701,
+          "precision": 0.0174,
+          "recall": 0.4592
+        }
+      ]
+    },
+    "basic_rag": {
+      "precision_scores": [
+        0.197545126080513,
+        0.11543290317058563,
+        0.5199141502380371
+      ],
+      "recall_scores": [
+        0.3270889222621918,
+        0.34643128514289856,
+        0.3190561830997467
+      ],
+      "f1_scores": [
+        0.26271259784698486,
+        0.22960861027240753,
+        0.4185435473918915
+      ],
+      "f1_raw_scores": [
+        0.8755648732185364,
+        0.8699777722358704,
+        0.9018651247024536
+      ],
+      "avg_precision": 0.2776,
+      "avg_recall": 0.3309,
+      "avg_f1_rescaled": 0.3036,
+      "avg_f1_raw": 0.8825,
+      "model": "roberta-large",
+      "meets_bonus_f1_rescaled": false,
+      "meets_bonus_f1_raw": true,
+      "pipeline": "Basic RAG",
+      "total_questions": 3,
+      "per_question": [
+        {
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "f1_rescaled": 0.2627,
+          "f1_raw": 0.8756,
+          "precision": 0.1975,
+          "recall": 0.3271
+        },
+        {
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language process",
+          "f1_rescaled": 0.2296,
+          "f1_raw": 0.87,
+          "precision": 0.1154,
+          "recall": 0.3464
+        },
+        {
+          "question_index": 2,
+          "question": "What is the relationship between Geoffrey Hinton, Yann LeCun, and Yoshua Bengio in the development o",
+          "f1_rescaled": 0.4185,
+          "f1_raw": 0.9019,
+          "precision": 0.5199,
+          "recall": 0.3191
+        }
+      ]
+    },
+    "graphrag": {
+      "precision_scores": [
+        -0.020790891721844673,
+        -0.07927197217941284,
+        0.3088352680206299
+      ],
+      "recall_scores": [
+        0.33966168761253357,
+        0.22780804336071014,
+        0.3070511519908905
+      ],
+      "f1_scores": [
+        0.1544433832168579,
+        0.07108090817928314,
+        0.30906757712364197
+      ],
+      "f1_raw_scores": [
+        0.8572918176651001,
+        0.8432223796844482,
+        0.8833884000778198
+      ],
+      "avg_precision": 0.0696,
+      "avg_recall": 0.2915,
+      "avg_f1_rescaled": 0.1782,
+      "avg_f1_raw": 0.8613,
+      "model": "roberta-large",
+      "meets_bonus_f1_rescaled": false,
+      "meets_bonus_f1_raw": false,
+      "pipeline": "GraphRAG",
+      "total_questions": 3,
+      "per_question": [
+        {
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "f1_rescaled": 0.1544,
+          "f1_raw": 0.8573,
+          "precision": -0.0208,
+          "recall": 0.3397
+        },
+        {
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language process",
+          "f1_rescaled": 0.0711,
+          "f1_raw": 0.8432,
+          "precision": -0.0793,
+          "recall": 0.2278
+        },
+        {
+          "question_index": 2,
+          "question": "What is the relationship between Geoffrey Hinton, Yann LeCun, and Yoshua Bengio in the development o",
+          "f1_rescaled": 0.3091,
+          "f1_raw": 0.8834,
+          "precision": 0.3088,
+          "recall": 0.3071
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "llm_only_avg_tokens": 686.0,
+    "basic_rag_avg_tokens": 1231.0,
+    "graphrag_avg_tokens": 569.3333333333334,
+    "token_reduction_vs_rag_pct": 53.75,
+    "token_reduction_vs_llm_pct": 17.01
+  },
+  "metadata": {
+    "timestamp": "2026-05-14T22:54:27.859074",
+    "num_questions": 3,
+    "llm_model": "llama-3.3-70b-versatile",
+    "rag_chunk_size": 1000,
+    "rag_top_k": 5,
+    "graphrag_method": "hybrid",
+    "graphrag_top_k": 5,
+    "graphrag_num_hops": 2,
+    "skip_graphrag": false
+  }
+}

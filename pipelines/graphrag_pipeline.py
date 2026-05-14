@@ -28,34 +28,48 @@ class GraphRAGPipeline(BasePipeline):
         """Initialize TigerGraph connection (graceful fallback on failure)."""
         try:
             from pyTigerGraph import TigerGraphConnection
-            
-            # Connect using the verified Savanna Cloud credentials
-            self.conn = TigerGraphConnection(
-                host=config.TG_HOST,
-                username=config.TG_USERNAME,
-                password=config.TG_PASSWORD,
-                gsqlSecret=config.TG_SECRET,
-                graphname=config.TG_GRAPHNAME,
-                tgCloud=True,
-                restppPort=config.TG_RESTPP_PORT,
-                gsPort=config.TG_GS_PORT
-            )
-            
-            # Generate JWT Token using the Secret provided by the user
-            print(f"Generating JWT token for {config.TG_USERNAME}...")
-            token = self.conn.getToken(config.TG_SECRET)
-            self.conn.apiToken = token[0]
-            
-            # Manual override for auth header to ensure consistency across all AI calls
-            self.conn.authHeader = {'Authorization': f'Bearer {token[0]}'}
-            
+
+            is_local = "localhost" in config.TG_HOST or "127.0.0.1" in config.TG_HOST
+
+            if is_local:
+                # Local Docker Community Edition — no token auth needed
+                self.conn = TigerGraphConnection(
+                    host=config.TG_HOST,
+                    username=config.TG_USERNAME,
+                    password=config.TG_PASSWORD,
+                    graphname=config.TG_GRAPHNAME,
+                    restppPort=config.TG_RESTPP_PORT,
+                    gsPort=config.TG_GS_PORT,
+                )
+            else:
+                # Savanna Cloud — token auth
+                self.conn = TigerGraphConnection(
+                    host=config.TG_HOST,
+                    username=config.TG_USERNAME,
+                    password=config.TG_PASSWORD,
+                    gsqlSecret=config.TG_SECRET,
+                    graphname=config.TG_GRAPHNAME,
+                    tgCloud=True,
+                    restppPort=config.TG_RESTPP_PORT,
+                    gsPort=config.TG_GS_PORT,
+                )
+                print(f"Generating JWT token for {config.TG_USERNAME}...")
+                token = self.conn.getToken(config.TG_SECRET)
+                self.conn.apiToken = token[0]
+                self.conn.authHeader = {'Authorization': f'Bearer {token[0]}'}
+
+            # Verify connection
+            ping = self.conn.ping()
+            print(f"TigerGraph ping: {ping}")
+
             # Configure GraphRAG service host
             self.conn.ai.configureGraphRAGHost(config.GRAPHRAG_HOST)
             self._tg_available = True
-            
+
             print(f"GraphRAG pipeline initialized (TigerGraph connected)")
             print(f"   TigerGraph: {config.TG_HOST}")
             print(f"   Graph:      {config.TG_GRAPHNAME}")
+            print(f"   GraphRAG:   {config.GRAPHRAG_HOST}")
         except Exception as e:
             self._tg_available = False
             print(f"GraphRAG pipeline initialized (TigerGraph unavailable, using local fallback)")
@@ -98,7 +112,7 @@ class GraphRAGPipeline(BasePipeline):
         print("Document ingestion complete")
     
     def query(self, question):
-        """Query using TigerGraph GraphRAG hybrid search."""
+        """Query using TigerGraph GraphRAG hybrid search via direct REST API."""
         self.ensure_initialized()
         start_time = time.time()
         
@@ -106,24 +120,35 @@ class GraphRAGPipeline(BasePipeline):
             return self._fallback_query(question, start_time)
         
         try:
-            # Use hybrid search (vector + graph traversal)
-            resp = self.conn.ai.answerQuestion(
-                question,
-                method=config.GRAPHRAG_METHOD,
-                method_parameters={
-                    "indices": ["DocumentChunk", "Community"],
-                    "top_k": config.GRAPHRAG_TOP_K,
-                    "num_hops": config.GRAPHRAG_NUM_HOPS,
-                    "num_seen_min": config.GRAPHRAG_NUM_SEEN_MIN,
-                    "verbose": True
-                }
-            )
+            import requests as req_lib
+            auth = (config.TG_USERNAME, config.TG_PASSWORD)
+            graphrag_url = f"{config.GRAPHRAG_HOST}/{config.TG_GRAPHNAME}/graphrag/answerquestion"
+            
+            # Try hybrid first, fall back to sibling if it fails
+            for method in ["hybrid", "sibling", "community"]:
+                try:
+                    resp = req_lib.post(
+                        graphrag_url,
+                        json={"question": question, "method": method},
+                        auth=auth,
+                        timeout=60
+                    )
+                    if resp.status_code == 200:
+                        result = resp.json()
+                        break
+                    elif resp.status_code == 500:
+                        continue
+                except Exception:
+                    continue
+            else:
+                # All methods failed, use fallback
+                return self._fallback_query(question, start_time)
             
             latency = time.time() - start_time
-            answer = resp.get("response", "No response")
+            answer = result.get("response", result.get("answer", str(result)))
             
             # Extract token usage from GraphRAG response
-            token_info = resp.get("token_usage", {})
+            token_info = result.get("token_usage", {})
             pt = token_info.get("prompt_tokens", 0)
             ct = token_info.get("completion_tokens", 0)
             tt = token_info.get("total_tokens", pt + ct)
@@ -134,7 +159,7 @@ class GraphRAGPipeline(BasePipeline):
                 ct = len(answer) // 4
                 tt = pt + ct
             
-            context_text = resp.get("retrieved_context", "")
+            context_text = result.get("retrieved_context", "")
             if isinstance(context_text, list):
                 context_text = "\n".join(str(c) for c in context_text)
             
@@ -155,7 +180,7 @@ class GraphRAGPipeline(BasePipeline):
                     "top_k": config.GRAPHRAG_TOP_K,
                     "num_hops": config.GRAPHRAG_NUM_HOPS,
                     "num_seen_min": config.GRAPHRAG_NUM_SEEN_MIN,
-                    "raw_response_keys": list(resp.keys()),
+                    "raw_response_keys": list(result.keys()),
                 }
             )
             

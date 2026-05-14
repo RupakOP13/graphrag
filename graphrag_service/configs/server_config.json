@@ -1,0 +1,54 @@
+{
+  "db_config": {
+    "hostname": "http://tigergraph",
+    "restppPort": "14240",
+    "gsPort": "14240",
+    "username": "tigergraph",
+    "password": "tigergraph",
+    "getToken": true,
+    "default_timeout": 300,
+    "default_mem_threshold": 5000,
+    "default_thread_limit": 8
+  },
+  "graphrag_config": {
+    "reuse_embedding": true,
+    "ecc": "http://graphrag-ecc:8001",
+    "chat_history_api": "http://chat-history:8002",
+    "chunker": "character-recursive",
+    "extractor": "llm",
+    "chunker_config": {
+      "chunk_size": 1000,
+      "chunk_overlap": 200
+    }
+  },
+  "llm_config": {
+    "token_limit": 0,
+    "authentication_configuration": {
+      "GROQ_API_KEY": "YOUR_GROQ_API_KEY",
+      "OPENAI_API_KEY": "YOUR_OPENAI_API_KEY"
+    },
+    "embedding_service": {
+      "model_name": "all-MiniLM-L6-v2",
+      "embedding_model_service": "openai",
+      "base_url": "http://host.docker.internal:8003/v1"
+    },
+    "completion_service": {
+      "llm_service": "groq",
+      "llm_model": "llama-3.3-70b-versatile",
+      "model_kwargs": {
+        "temperature": 0
+      },
+      "prompt_path": "./common/prompts/openai_gpt4/"
+    }
+  },
+  "chat_config": {
+    "apiPort": "8002",
+    "dbPath": "chats.db",
+    "dbLogPath": "db.log",
+    "logPath": "requestLogs.jsonl",
+    "conversationAccessRoles": [
+      "superuser",
+      "globaldesigner"
+    ]
+  }
+}

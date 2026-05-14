@@ -1,0 +1,386 @@
+{
+  "llm_only": {
+    "pipeline": "LLM-Only",
+    "results": [
+      {
+        "pipeline_name": "LLM-Only",
+        "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+        "answer": "Error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99375, Requested 1093. Please try again in 6m44.352s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "latency_seconds": 0.462,
+        "cost_usd": 0.0,
+        "context_text": "",
+        "context_tokens": 0,
+        "metadata": {
+          "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99375, Requested 1093. Please try again in 6m44.352s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "model": "llama-3.3-70b-versatile",
+          "expected_answer": "John McCarthy is widely considered the father of artificial intelligence. He coined the term 'artificial intelligence' in 1956 at the Dartmouth Conference, developed the Lisp programming language, and made fundamental contributions to the field including the concept of time-sharing in computing.",
+          "question_index": 0
+        }
+      },
+      {
+        "pipeline_name": "LLM-Only",
+        "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+        "answer": "Error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99375, Requested 1094. Please try again in 6m45.215999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "latency_seconds": 0.019,
+        "cost_usd": 0.0,
+        "context_text": "",
+        "context_tokens": 0,
+        "metadata": {
+          "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99375, Requested 1094. Please try again in 6m45.215999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "model": "llama-3.3-70b-versatile",
+          "expected_answer": "The transformer architecture, introduced in the 2017 paper 'Attention Is All You Need' by Vaswani et al., uses self-attention mechanisms to process all positions in a sequence simultaneously rather than sequentially. This parallel processing was revolutionary because it enabled much faster training, better handling of long-range dependencies, and led to breakthroughs like BERT, GPT, and modern large language models.",
+          "question_index": 1
+        }
+      }
+    ],
+    "avg_tokens": 0.0,
+    "avg_latency": 0.24050000000000002,
+    "avg_cost": 0.0,
+    "total_tokens": 0
+  },
+  "basic_rag": {
+    "pipeline": "Basic RAG",
+    "results": [
+      {
+        "pipeline_name": "Basic RAG",
+        "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+        "answer": "Error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99365, Requested 1942. Please try again in 18m49.248s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "latency_seconds": 0.282,
+        "cost_usd": 0.0,
+        "context_text": "",
+        "context_tokens": 0,
+        "metadata": {
+          "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99365, Requested 1942. Please try again in 18m49.248s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "expected_answer": "John McCarthy is widely considered the father of artificial intelligence. He coined the term 'artificial intelligence' in 1956 at the Dartmouth Conference, developed the Lisp programming language, and made fundamental contributions to the field including the concept of time-sharing in computing.",
+          "question_index": 0
+        }
+      },
+      {
+        "pipeline_name": "Basic RAG",
+        "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+        "answer": "Error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99365, Requested 2107. Please try again in 21m11.808s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "latency_seconds": 0.062,
+        "cost_usd": 0.0,
+        "context_text": "",
+        "context_tokens": 0,
+        "metadata": {
+          "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99365, Requested 2107. Please try again in 21m11.808s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "expected_answer": "The transformer architecture, introduced in the 2017 paper 'Attention Is All You Need' by Vaswani et al., uses self-attention mechanisms to process all positions in a sequence simultaneously rather than sequentially. This parallel processing was revolutionary because it enabled much faster training, better handling of long-range dependencies, and led to breakthroughs like BERT, GPT, and modern large language models.",
+          "question_index": 1
+        }
+      }
+    ],
+    "avg_tokens": 0.0,
+    "avg_latency": 0.172,
+    "avg_cost": 0.0,
+    "total_tokens": 0
+  },
+  "graphrag": {
+    "pipeline": "GraphRAG",
+    "results": [
+      {
+        "pipeline_name": "GraphRAG",
+        "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+        "answer": "Error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99343, Requested 1111. Please try again in 6m32.256s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "prompt_tokens": 47,
+        "completion_tokens": 0,
+        "total_tokens": 47,
+        "latency_seconds": 17.247,
+        "cost_usd": 0.0,
+        "context_text": "",
+        "context_tokens": 0,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "method": "hybrid_fallback",
+          "top_k": 5,
+          "fallback_activated": true,
+          "expected_answer": "John McCarthy is widely considered the father of artificial intelligence. He coined the term 'artificial intelligence' in 1956 at the Dartmouth Conference, developed the Lisp programming language, and made fundamental contributions to the field including the concept of time-sharing in computing.",
+          "question_index": 0
+        }
+      },
+      {
+        "pipeline_name": "GraphRAG",
+        "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+        "answer": "Error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99325, Requested 1112. Please try again in 6m17.568s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "prompt_tokens": 50,
+        "completion_tokens": 0,
+        "total_tokens": 50,
+        "latency_seconds": 15.81,
+        "cost_usd": 0.0,
+        "context_text": "",
+        "context_tokens": 0,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "method": "hybrid_fallback",
+          "top_k": 5,
+          "fallback_activated": true,
+          "expected_answer": "The transformer architecture, introduced in the 2017 paper 'Attention Is All You Need' by Vaswani et al., uses self-attention mechanisms to process all positions in a sequence simultaneously rather than sequentially. This parallel processing was revolutionary because it enabled much faster training, better handling of long-range dependencies, and led to breakthroughs like BERT, GPT, and modern large language models.",
+          "question_index": 1
+        }
+      }
+    ],
+    "avg_tokens": 48.5,
+    "avg_latency": 16.5285,
+    "avg_cost": 0.0,
+    "total_tokens": 97
+  },
+  "judge": {
+    "llm_only": {
+      "pipeline": "LLM-Only",
+      "total_questions": 2,
+      "pass_count": 0,
+      "fail_count": 2,
+      "pass_rate": 0.0,
+      "meets_bonus_threshold": false,
+      "judgments": [
+        {
+          "verdict": "ERROR",
+          "score": 0.0,
+          "reasoning": "Judge error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99323, Requested 957. Please try again in 4m1.92s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "confidence": "NONE",
+          "raw_response": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99323, Requested 957. Please try again in 4m1.92s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "pipeline": "LLM-Only"
+        },
+        {
+          "verdict": "ERROR",
+          "score": 0.0,
+          "reasoning": "Judge error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99321, Requested 987. Please try again in 4m26.111999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "confidence": "NONE",
+          "raw_response": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99321, Requested 987. Please try again in 4m26.111999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+          "pipeline": "LLM-Only"
+        }
+      ]
+    },
+    "basic_rag": {
+      "pipeline": "Basic RAG",
+      "total_questions": 2,
+      "pass_count": 0,
+      "fail_count": 2,
+      "pass_rate": 0.0,
+      "meets_bonus_threshold": false,
+      "judgments": [
+        {
+          "verdict": "ERROR",
+          "score": 0.0,
+          "reasoning": "Judge error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99319, Requested 957. Please try again in 3m58.464s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "confidence": "NONE",
+          "raw_response": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99319, Requested 957. Please try again in 3m58.464s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "pipeline": "Basic RAG"
+        },
+        {
+          "verdict": "ERROR",
+          "score": 0.0,
+          "reasoning": "Judge error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99316, Requested 985. Please try again in 4m20.064s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "confidence": "NONE",
+          "raw_response": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99316, Requested 985. Please try again in 4m20.064s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+          "pipeline": "Basic RAG"
+        }
+      ]
+    },
+    "graphrag": {
+      "pipeline": "GraphRAG",
+      "total_questions": 2,
+      "pass_count": 0,
+      "fail_count": 2,
+      "pass_rate": 0.0,
+      "meets_bonus_threshold": false,
+      "judgments": [
+        {
+          "verdict": "ERROR",
+          "score": 0.0,
+          "reasoning": "Judge error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99314, Requested 957. Please try again in 3m54.144s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "confidence": "NONE",
+          "raw_response": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99314, Requested 957. Please try again in 3m54.144s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "pipeline": "GraphRAG"
+        },
+        {
+          "verdict": "ERROR",
+          "score": 0.0,
+          "reasoning": "Judge error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99312, Requested 985. Please try again in 4m16.608s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "confidence": "NONE",
+          "raw_response": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01knj04kp7e3rba3b7hdhb6yrg` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99312, Requested 985. Please try again in 4m16.608s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+          "pipeline": "GraphRAG"
+        }
+      ]
+    }
+  },
+  "bertscore": {
+    "llm_only": {
+      "precision_scores": [
+        0.0,
+        0.0
+      ],
+      "recall_scores": [
+        0.0,
+        0.0
+      ],
+      "f1_scores": [
+        0.0,
+        0.0
+      ],
+      "f1_raw_scores": [
+        0.0,
+        0.0
+      ],
+      "avg_precision": 0.0,
+      "avg_recall": 0.0,
+      "avg_f1_rescaled": 0.0,
+      "avg_f1_raw": 0.0,
+      "model": "microsoft/deberta-xlarge-mnli",
+      "meets_bonus_f1_rescaled": false,
+      "meets_bonus_f1_raw": false,
+      "pipeline": "LLM-Only",
+      "total_questions": 2,
+      "per_question": [
+        {
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "f1_rescaled": 0.0,
+          "f1_raw": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language process",
+          "f1_rescaled": 0.0,
+          "f1_raw": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      ]
+    },
+    "basic_rag": {
+      "precision_scores": [
+        0.0,
+        0.0
+      ],
+      "recall_scores": [
+        0.0,
+        0.0
+      ],
+      "f1_scores": [
+        0.0,
+        0.0
+      ],
+      "f1_raw_scores": [
+        0.0,
+        0.0
+      ],
+      "avg_precision": 0.0,
+      "avg_recall": 0.0,
+      "avg_f1_rescaled": 0.0,
+      "avg_f1_raw": 0.0,
+      "model": "microsoft/deberta-xlarge-mnli",
+      "meets_bonus_f1_rescaled": false,
+      "meets_bonus_f1_raw": false,
+      "pipeline": "Basic RAG",
+      "total_questions": 2,
+      "per_question": [
+        {
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "f1_rescaled": 0.0,
+          "f1_raw": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language process",
+          "f1_rescaled": 0.0,
+          "f1_raw": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      ]
+    },
+    "graphrag": {
+      "precision_scores": [
+        0.0,
+        0.0
+      ],
+      "recall_scores": [
+        0.0,
+        0.0
+      ],
+      "f1_scores": [
+        0.0,
+        0.0
+      ],
+      "f1_raw_scores": [
+        0.0,
+        0.0
+      ],
+      "avg_precision": 0.0,
+      "avg_recall": 0.0,
+      "avg_f1_rescaled": 0.0,
+      "avg_f1_raw": 0.0,
+      "model": "microsoft/deberta-xlarge-mnli",
+      "meets_bonus_f1_rescaled": false,
+      "meets_bonus_f1_raw": false,
+      "pipeline": "GraphRAG",
+      "total_questions": 2,
+      "per_question": [
+        {
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "f1_rescaled": 0.0,
+          "f1_raw": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        {
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language process",
+          "f1_rescaled": 0.0,
+          "f1_raw": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "llm_only_avg_tokens": 0.0,
+    "basic_rag_avg_tokens": 0.0,
+    "graphrag_avg_tokens": 48.5,
+    "token_reduction_vs_rag_pct": 0,
+    "token_reduction_vs_llm_pct": 0
+  },
+  "metadata": {
+    "timestamp": "2026-05-13T04:13:11.091618",
+    "num_questions": 2,
+    "llm_model": "llama-3.3-70b-versatile",
+    "rag_chunk_size": 1000,
+    "rag_top_k": 5,
+    "graphrag_method": "hybrid",
+    "graphrag_top_k": 5,
+    "graphrag_num_hops": 2,
+    "skip_graphrag": false
+  }
+}

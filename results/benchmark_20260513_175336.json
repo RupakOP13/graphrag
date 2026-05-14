@@ -1,0 +1,265 @@
+{
+  "llm_only": {
+    "pipeline": "LLM-Only",
+    "results": [
+      {
+        "pipeline_name": "LLM-Only",
+        "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+        "answer": "John McCarthy is widely considered the father of artificial intelligence (AI). He was an American computer scientist and cognitive scientist who made significant contributions to the field of AI. McCarthy's key contributions include:\n\n1. **Coining the term \"Artificial Intelligence\"**: McCarthy coined the term \"Artificial Intelligence\" in 1956, during the Dartmouth Summer Research Project on Artificial Intelligence, which he organized with Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This project is considered the birthplace of AI as a field of research.\n2. **Developing the Lisp programming language**: McCarthy developed the Lisp programming language in 1958, which became a fundamental tool for AI research. Lisp is a high-level, symbolic language that is well-suited for AI applications, such as symbolic reasoning, expert systems, and natural language processing.\n3. **Introducing the concept of time-sharing**: McCarthy introduced the concept of time-sharing, which allowed multiple users to interact with a computer simultaneously. This innovation enabled the development of interactive AI systems, such as chatbots and virtual assistants.\n4. **Proposing the idea of a \"logical\" AI**: McCarthy proposed the idea of a \"logical\" AI, which would use logical reasoning and problem-solving to achieve intelligent behavior. This approach is still a fundamental aspect of AI research today.\n5. **Organizing the first AI conference**: McCarthy organized the first AI conference, the 1956 Dartmouth Summer Research Project on Artificial Intelligence, which brought together researchers from various fields to discuss the possibilities of creating intelligent machines.\n6. **Advocating for AI research**: McCarthy was a strong advocate for AI research and its potential to benefit society. He worked to promote AI research and education, and he helped to establish AI as a recognized field of study.\n\nMcCarthy's contributions to AI have had a lasting impact on the field, and his work continues to influence AI research and development today. He is widely recognized as one of the founders of AI, and his legacy continues to inspire new generations of AI researchers and practitioners.",
+        "prompt_tokens": 69,
+        "completion_tokens": 412,
+        "total_tokens": 481,
+        "latency_seconds": 2.095,
+        "cost_usd": 0.0,
+        "context_text": "",
+        "context_tokens": 0,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "expected_answer": "John McCarthy is widely considered the father of artificial intelligence. He coined the term 'artificial intelligence' in 1956 at the Dartmouth Conference, developed the Lisp programming language, and made fundamental contributions to the field including the concept of time-sharing in computing.",
+          "question_index": 0
+        }
+      },
+      {
+        "pipeline_name": "LLM-Only",
+        "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+        "answer": "The Transformer architecture, introduced in the paper \"Attention Is All You Need\" by Vaswani et al. in 2017, revolutionized the field of Natural Language Processing (NLP) by providing a more efficient and effective way to handle sequential data, particularly text. The Transformer architecture is a type of neural network designed primarily for sequence-to-sequence tasks, such as machine translation, text summarization, and text generation.\n\n**Key Components of the Transformer Architecture:**\n\n1. **Self-Attention Mechanism:** The Transformer's core innovation is the self-attention mechanism, which allows the model to attend to different parts of the input sequence simultaneously and weigh their importance. This is different from traditional recurrent neural networks (RNNs), which process sequences sequentially, one step at a time.\n2. **Encoder-Decoder Structure:** The Transformer consists of an encoder and a decoder. The encoder takes in a sequence of tokens (e.g., words or characters) and outputs a sequence of vectors. The decoder then generates the output sequence, one token at a time, based on the output vectors from the encoder.\n3. **Multi-Head Attention:** The Transformer uses multi-head attention, which allows the model to jointly attend to information from different representation subspaces at different positions. This is achieved by applying multiple attention mechanisms in parallel, each with a different set of learnable weights.\n4. **Positional Encoding:** Since the Transformer does not use RNNs or convolutional neural networks (CNNs), it needs a way to preserve the order of the input sequence. Positional encoding adds a fixed vector to each input embedding, which encodes the position of the token in the sequence.\n\n**How the Transformer Architecture Works:**\n\n1. **Input Embeddings:** The input sequence is first embedded into a vector space using a learnable embedding matrix.\n2. **Positional Encoding:** The embedded input sequence is then added with positional encoding to preserve the order of the sequence.\n3. **Encoder:** The encoded input sequence is fed into the encoder, which consists of a stack of identical layers. Each layer applies self-attention, followed by feed-forward neural networks (FFNNs).\n4. **Decoder:** The output from the encoder is fed into the decoder, which also consists of a stack of identical layers. Each layer applies self-attention, followed by FFNNs, and then generates the output sequence, one token at a time.\n5. **Output:** The final output is generated by taking the output from the decoder and applying a softmax function to obtain the probability distribution over the possible output tokens.\n\n**Why the Transformer Architecture was Revolutionary:**\n\n1. **Parallelization:** The Transformer architecture can be parallelized more easily than RNNs, which makes it much faster to train and more suitable for large-scale NLP tasks.\n2. **Improved Performance:** The Transformer architecture has achieved state-of-the-art results in many NLP tasks, including machine translation, text summarization, and text generation.\n3. **Flexibility:** The Transformer architecture can be applied to a wide range of NLP tasks, including but not limited to machine translation, text classification, sentiment analysis, and question answering.\n4. **Efficient Use of Parameters:** The Transformer architecture uses parameters more efficiently than RNNs, which makes it possible to train larger models with fewer parameters.\n\nOverall, the Transformer architecture has revolutionized the field of NLP by providing a more efficient, effective, and flexible way to handle sequential data. Its impact has been felt across many areas of NLP, and it continues to be a widely used and influential architecture in the field.",
+        "prompt_tokens": 70,
+        "completion_tokens": 732,
+        "total_tokens": 802,
+        "latency_seconds": 2.313,
+        "cost_usd": 0.0,
+        "context_text": "",
+        "context_tokens": 0,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "expected_answer": "The transformer architecture, introduced in the 2017 paper 'Attention Is All You Need' by Vaswani et al., uses self-attention mechanisms to process all positions in a sequence simultaneously rather than sequentially. This parallel processing was revolutionary because it enabled much faster training, better handling of long-range dependencies, and led to breakthroughs like BERT, GPT, and modern large language models.",
+          "question_index": 1
+        }
+      }
+    ],
+    "avg_tokens": 641.5,
+    "avg_latency": 2.204,
+    "avg_cost": 0.0,
+    "total_tokens": 1283
+  },
+  "basic_rag": {
+    "pipeline": "Basic RAG",
+    "results": [
+      {
+        "pipeline_name": "Basic RAG",
+        "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+        "answer": "According to the context, there are multiple individuals considered as the \"fathers of AI\", including Marvin Minsky and John McCarthy. Marvin Minsky's key contributions include co-founding MIT's AI laboratory and writing extensively about AI and philosophy. However, the context does not provide a detailed list of his contributions. It does mention that he received many accolades and honors for his work, including the ACM Turing Award in 1969.",
+        "prompt_tokens": 918,
+        "completion_tokens": 88,
+        "total_tokens": 1006,
+        "latency_seconds": 0.775,
+        "cost_usd": 0.0,
+        "context_text": "[Source: History of artificial intelligence]\nThe history of artificial intelligence (AI) began in antiquity, with myths, stories, and rumors of artificial beings endowed with intelligence or consciousness by master craftsmen. The study of logic and formal reasoning from antiquity to the present led to the development of the programmable digital computer in the 1940s, a machine predicated on abstract mathematical reasoning. This device and the ideas behind it inspired scientists to begin discussing the possibility of building an electronic brain.\nThe field of AI research was founded at a workshop held on the campus of Dartmouth College in 1956. At the workshop, the first AI program, Logic Theorist, was presented by future Turing Awardee Allen Newell and future Nobel Laureate Herbert A. Simon, with help from J. C. Shaw. Attendees of the workshop became the leaders of AI research for decades. Many of them predicted that machines as intelligent as humans would exist within a generation. Th",
+        "context_tokens": 926,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "num_chunks": 5,
+          "top_k": 5,
+          "expected_answer": "John McCarthy is widely considered the father of artificial intelligence. He coined the term 'artificial intelligence' in 1956 at the Dartmouth Conference, developed the Lisp programming language, and made fundamental contributions to the field including the concept of time-sharing in computing.",
+          "question_index": 0
+        }
+      },
+      {
+        "pipeline_name": "Basic RAG",
+        "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+        "answer": "The transformer architecture works by using a multi-head attention model that allows it to process all tokens in parallel, while preserving its dot-product attention mechanism. This is achieved through the use of independent heads and the lack of recurrence, making it easier to parallelize. The architecture consists of an embedding layer, transformer layers (which carry out repeated transformations on the vector representations), and an un-embedding layer (which converts the final vector representations back to a probability distribution over the tokens).\n\nThe transformer architecture was revolutionary for natural language processing because it allowed for the development of large language models that could learn and model complex patterns in language. It was introduced in the 2017 paper \"Attention Is All You Need\" and has since become the model of choice for many natural language processing tasks. The transformer architecture requires computation time that is quadratic in the size of the context window, but variants such as the unnormalized linear transformer have been shown to scale linearly.\n\nThe transformer architecture has been widely adopted for training large language models on large datasets, and has been used in a variety of applications including language translation, text generation, and question answering. Its parallelizability was an important factor in its widespread use in large neural networks, and it has been used alongside many generative models that contribute to the ongoing AI boom. Overall, the transformer architecture has been a major breakthrough in natural language processing, allowing for the development of more accurate and efficient language models.",
+        "prompt_tokens": 1083,
+        "completion_tokens": 287,
+        "total_tokens": 1370,
+        "latency_seconds": 1.021,
+        "cost_usd": 0.0,
+        "context_text": "[Source: Neural network (machine learning)]\neural network (ResNet) in December 2015. ResNet behaves like an open-gated Highway Net.\n\nTransformers\nDuring the 2010s, the seq2seq model was developed, and attention mechanisms were added. It led to the modern transformer architecture in 2017 in Attention Is All You Need.\nIt requires computation time that is quadratic in the size of the context window. Jürgen Schmidhuber's fast weight controller (1992) scales linearly and was later shown to be equivalent to the unnormalized linear transformer.\nTransformers have increasingly become the model of choice for natural language processing. Many modern large language models such as ChatGPT, GPT-4, and BERT use this architecture.\n\nModels\nANNs began as an attempt to exploit the architecture of the human brain to perform tasks that conventional algorithms had little success with. They soon reoriented towards improving empirical results, abandoning attempts to remain true to their biological precursors.",
+        "context_tokens": 1300,
+        "metadata": {
+          "model": "llama-3.3-70b-versatile",
+          "num_chunks": 5,
+          "top_k": 5,
+          "expected_answer": "The transformer architecture, introduced in the 2017 paper 'Attention Is All You Need' by Vaswani et al., uses self-attention mechanisms to process all positions in a sequence simultaneously rather than sequentially. This parallel processing was revolutionary because it enabled much faster training, better handling of long-range dependencies, and led to breakthroughs like BERT, GPT, and modern large language models.",
+          "question_index": 1
+        }
+      }
+    ],
+    "avg_tokens": 1188.0,
+    "avg_latency": 0.8979999999999999,
+    "avg_cost": 0.0,
+    "total_tokens": 2376
+  },
+  "judge": {
+    "llm_only": {
+      "pipeline": "LLM-Only",
+      "total_questions": 2,
+      "pass_count": 2,
+      "fail_count": 0,
+      "pass_rate": 1.0,
+      "meets_bonus_threshold": true,
+      "judgments": [
+        {
+          "verdict": "PASS",
+          "score": 1.0,
+          "reasoning": "The predicted answer is largely correct and covers most key points. It accurately identifies John McCarthy as the father of artificial intelligence and lists his key contributions, including coining the term 'artificial intelligence', developing the Lisp programming language, introducing the concept of time-sharing, and organizing the first AI conference. The answer also mentions McCarthy's advocacy for AI research and his legacy in the field. While the predicted answer provides more detailed in",
+          "confidence": "HIGH",
+          "raw_response": "VERDICT: PASS\nREASONING: The predicted answer is largely correct and covers most key points. It accurately identifies John McCarthy as the father of artificial intelligence and lists his key contributions, including coining the term 'artificial intelligence', developing the Lisp programming language, introducing the concept of time-sharing, and organizing the first AI conference. The answer also mentions McCarthy's advocacy for AI research and his legacy in the field. While the predicted answer provides more detailed information than the expected answer, the core facts and key points are accurately represented.\nCONFIDENCE: HIGH",
+          "judge_source": "groq/llama-3.1-8b (fallback)",
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "pipeline": "LLM-Only"
+        },
+        {
+          "verdict": "PASS",
+          "score": 1.0,
+          "reasoning": "The predicted answer is largely correct and covers most key points. It accurately describes the Transformer architecture, its components, and its revolutionary impact on natural language processing. The predicted answer also provides a clear explanation of how the Transformer architecture works and why it was revolutionary. However, it does not explicitly mention the \"Attention Is All You Need\" paper, which is a crucial point in the expected answer. Nevertheless, the predicted answer is comprehe",
+          "confidence": "HIGH",
+          "raw_response": "VERDICT: PASS\nREASONING: The predicted answer is largely correct and covers most key points. It accurately describes the Transformer architecture, its components, and its revolutionary impact on natural language processing. The predicted answer also provides a clear explanation of how the Transformer architecture works and why it was revolutionary. However, it does not explicitly mention the \"Attention Is All You Need\" paper, which is a crucial point in the expected answer. Nevertheless, the predicted answer is comprehensive and provides a thorough understanding of the Transformer architecture.\nCONFIDENCE: HIGH",
+          "judge_source": "groq/llama-3.1-8b (fallback)",
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+          "pipeline": "LLM-Only"
+        }
+      ]
+    },
+    "basic_rag": {
+      "pipeline": "Basic RAG",
+      "total_questions": 2,
+      "pass_count": 2,
+      "fail_count": 0,
+      "pass_rate": 1.0,
+      "meets_bonus_threshold": true,
+      "judgments": [
+        {
+          "verdict": "PASS",
+          "score": 1.0,
+          "reasoning": "The predicted answer is largely correct in terms of factual accuracy, mentioning John McCarthy as one of the \"fathers of AI\" and his key contributions. However, it also correctly identifies Marvin Minsky as another key figure in the field, although it does not provide a detailed list of his contributions. The answer also addresses the question by providing relevant information about the key individuals and their contributions to AI. While it does not cover all the key points mentioned in the exp",
+          "confidence": "HIGH",
+          "raw_response": "VERDICT: PASS\nREASONING: The predicted answer is largely correct in terms of factual accuracy, mentioning John McCarthy as one of the \"fathers of AI\" and his key contributions. However, it also correctly identifies Marvin Minsky as another key figure in the field, although it does not provide a detailed list of his contributions. The answer also addresses the question by providing relevant information about the key individuals and their contributions to AI. While it does not cover all the key points mentioned in the expected answer, such as the coining of the term 'artificial intelligence' and the development of the Lisp programming language, it still provides a comprehensive overview of the topic.\nCONFIDENCE: HIGH",
+          "judge_source": "groq/llama-3.1-8b (fallback)",
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "pipeline": "Basic RAG"
+        },
+        {
+          "verdict": "PASS",
+          "score": 1.0,
+          "reasoning": "The predicted answer is largely correct in terms of factual accuracy, covering the key points of the transformer architecture's parallel processing capabilities, its revolutionary impact on natural language processing, and its widespread adoption in various applications. The predicted answer also correctly mentions the 2017 paper \"Attention Is All You Need\" and the importance of parallelizability. However, it does not explicitly mention the better handling of long-range dependencies and the quad",
+          "confidence": "HIGH",
+          "raw_response": "VERDICT: PASS\nREASONING: The predicted answer is largely correct in terms of factual accuracy, covering the key points of the transformer architecture's parallel processing capabilities, its revolutionary impact on natural language processing, and its widespread adoption in various applications. The predicted answer also correctly mentions the 2017 paper \"Attention Is All You Need\" and the importance of parallelizability. However, it does not explicitly mention the better handling of long-range dependencies and the quadratic computation time of the original transformer architecture, which are minor omissions. Overall, the predicted answer provides a comprehensive and accurate explanation of the transformer architecture and its significance in natural language processing.\nCONFIDENCE: HIGH",
+          "judge_source": "groq/llama-3.1-8b (fallback)",
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language processing?",
+          "pipeline": "Basic RAG"
+        }
+      ]
+    }
+  },
+  "bertscore": {
+    "llm_only": {
+      "precision_scores": [
+        0.006225628778338432,
+        -0.1759130209684372
+      ],
+      "recall_scores": [
+        0.5450305342674255,
+        0.36985066533088684
+      ],
+      "f1_scores": [
+        0.26291000843048096,
+        0.08367431163787842
+      ],
+      "f1_raw_scores": [
+        0.8755981922149658,
+        0.8453478217124939
+      ],
+      "avg_precision": -0.0848,
+      "avg_recall": 0.4574,
+      "avg_f1_rescaled": 0.1733,
+      "avg_f1_raw": 0.8605,
+      "model": "roberta-large",
+      "meets_bonus_f1_rescaled": false,
+      "meets_bonus_f1_raw": false,
+      "pipeline": "LLM-Only",
+      "total_questions": 2,
+      "per_question": [
+        {
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "f1_rescaled": 0.2629,
+          "f1_raw": 0.8756,
+          "precision": 0.0062,
+          "recall": 0.545
+        },
+        {
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language process",
+          "f1_rescaled": 0.0837,
+          "f1_raw": 0.8453,
+          "precision": -0.1759,
+          "recall": 0.3699
+        }
+      ]
+    },
+    "basic_rag": {
+      "precision_scores": [
+        0.19802798330783844,
+        0.10206153988838196
+      ],
+      "recall_scores": [
+        0.3272855877876282,
+        0.30259138345718384
+      ],
+      "f1_scores": [
+        0.2630551755428314,
+        0.20167279243469238
+      ],
+      "f1_raw_scores": [
+        0.8756226897239685,
+        0.8652629256248474
+      ],
+      "avg_precision": 0.15,
+      "avg_recall": 0.3149,
+      "avg_f1_rescaled": 0.2324,
+      "avg_f1_raw": 0.8704,
+      "model": "roberta-large",
+      "meets_bonus_f1_rescaled": false,
+      "meets_bonus_f1_raw": false,
+      "pipeline": "Basic RAG",
+      "total_questions": 2,
+      "per_question": [
+        {
+          "question_index": 0,
+          "question": "Who is considered the father of artificial intelligence and what were his key contributions?",
+          "f1_rescaled": 0.2631,
+          "f1_raw": 0.8756,
+          "precision": 0.198,
+          "recall": 0.3273
+        },
+        {
+          "question_index": 1,
+          "question": "How does the transformer architecture work and why was it revolutionary for natural language process",
+          "f1_rescaled": 0.2017,
+          "f1_raw": 0.8653,
+          "precision": 0.1021,
+          "recall": 0.3026
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "llm_only_avg_tokens": 641.5,
+    "basic_rag_avg_tokens": 1188.0
+  },
+  "metadata": {
+    "timestamp": "2026-05-13T17:52:01.039529",
+    "num_questions": 2,
+    "llm_model": "llama-3.3-70b-versatile",
+    "rag_chunk_size": 1000,
+    "rag_top_k": 5,
+    "graphrag_method": "hybrid",
+    "graphrag_top_k": 5,
+    "graphrag_num_hops": 2,
+    "skip_graphrag": true
+  }
+}

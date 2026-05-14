@@ -1,22 +1,9 @@
-# Environment
 .env
 venv/
 __pycache__/
 *.pyc
-
-# Dataset
-dataset/data/
-
-# Results
-results/*.json
-
-# IDE
-.vscode/
-.idea/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# ChromaDB
+.ipynb_checkpoints/
+data/
+dataset/data/wikipedia_ai_dataset.jsonl
+*.log
 chroma_db/

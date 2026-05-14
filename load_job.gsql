@@ -1,0 +1,2 @@
+USE GRAPH GraphRAGHackathon
+RUN LOADING JOB load_documents_content_json USING DocumentContent="/home/tigergraph/graphrag_ingest.jsonl"
