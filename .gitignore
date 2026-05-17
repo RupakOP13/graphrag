@@ -1,2 +1,8 @@
-
-chroma_db/chroma.sqlite3
+.env
+venv/
+__pycache__/
+*.pyc
+chroma_db/
+dataset/data/
+results/
+.DS_Store

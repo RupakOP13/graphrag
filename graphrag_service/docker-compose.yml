@@ -55,6 +55,8 @@ services:
       SERVER_CONFIG: "/code/configs/server_config.json"
       LOGLEVEL: "INFO"
       USE_CYPHER: "true"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - ./configs/:/code/configs
       - ../dataset/data/:/data/
