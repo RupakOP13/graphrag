@@ -1,9 +1,2 @@
-.env
-venv/
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
-data/
-dataset/data/wikipedia_ai_dataset.jsonl
-*.log
+
 chroma_db/
