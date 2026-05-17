@@ -124,27 +124,36 @@ class GraphRAGPipeline(BasePipeline):
             auth = (config.TG_USERNAME, config.TG_PASSWORD)
             graphrag_url = f"{config.GRAPHRAG_HOST}/{config.TG_GRAPHNAME}/graphrag/answerquestion"
             
-            # Try hybrid first, fall back to sibling if it fails
-            methods_to_try = [
-                ("hybrid", {
+            # Build method configurations
+            all_methods = {
+                "hybrid": {
                     "indices": ["DocumentChunk", "Community"],
                     "top_k": config.GRAPHRAG_TOP_K,
                     "num_hops": config.GRAPHRAG_NUM_HOPS,
                     "num_seen_min": config.GRAPHRAG_NUM_SEEN_MIN,
                     "verbose": True
-                }),
-                ("sibling", {
+                },
+                "sibling": {
                     "top_k": config.GRAPHRAG_TOP_K,
                     "lookback": 1,
                     "verbose": True
-                }),
-                ("community", {
+                },
+                "community": {
                     "community_level": config.GRAPHRAG_COMMUNITY_LEVEL,
                     "combine": False,
                     "top_k": config.GRAPHRAG_TOP_K,
                     "verbose": True
-                })
-            ]
+                }
+            }
+            
+            # Prioritize the method chosen in config
+            preferred_method = config.GRAPHRAG_METHOD
+            methods_to_try = [(preferred_method, all_methods[preferred_method])]
+            
+            # Add fallbacks
+            for m_name, m_params in all_methods.items():
+                if m_name != preferred_method:
+                    methods_to_try.append((m_name, m_params))
             
             for method, params in methods_to_try:
                 try:

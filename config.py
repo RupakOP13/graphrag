@@ -97,9 +97,9 @@ RAG_TOP_K = 5               # Number of chunks to retrieve
 # GraphRAG Retrieval Parameters (Pipeline 3)
 # =============================================================================
 GRAPHRAG_METHOD = "hybrid"   # "hybrid" or "community"
-GRAPHRAG_TOP_K = 5           # Seed results per search
+GRAPHRAG_TOP_K = 8           # Seed results per search
 GRAPHRAG_NUM_HOPS = 2        # Graph traversal depth
-GRAPHRAG_NUM_SEEN_MIN = 2    # Minimum occurrence filter
+GRAPHRAG_NUM_SEEN_MIN = 1    # Minimum occurrence filter (1 is better for small datasets)
 GRAPHRAG_COMMUNITY_LEVEL = 2 # Community hierarchy level
 
 
