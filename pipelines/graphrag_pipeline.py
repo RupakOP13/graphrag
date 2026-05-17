@@ -125,11 +125,32 @@ class GraphRAGPipeline(BasePipeline):
             graphrag_url = f"{config.GRAPHRAG_HOST}/{config.TG_GRAPHNAME}/graphrag/answerquestion"
             
             # Try hybrid first, fall back to sibling if it fails
-            for method in ["hybrid", "sibling", "community"]:
+            methods_to_try = [
+                ("hybrid", {
+                    "indices": ["DocumentChunk", "Community"],
+                    "top_k": config.GRAPHRAG_TOP_K,
+                    "num_hops": config.GRAPHRAG_NUM_HOPS,
+                    "num_seen_min": config.GRAPHRAG_NUM_SEEN_MIN,
+                    "verbose": True
+                }),
+                ("sibling", {
+                    "top_k": config.GRAPHRAG_TOP_K,
+                    "lookback": 1,
+                    "verbose": True
+                }),
+                ("community", {
+                    "community_level": config.GRAPHRAG_COMMUNITY_LEVEL,
+                    "combine": False,
+                    "top_k": config.GRAPHRAG_TOP_K,
+                    "verbose": True
+                })
+            ]
+            
+            for method, params in methods_to_try:
                 try:
                     resp = req_lib.post(
                         graphrag_url,
-                        json={"question": question, "method": method},
+                        json={"question": question, "method": method, "method_params": params},
                         auth=auth,
                         timeout=60
                     )
