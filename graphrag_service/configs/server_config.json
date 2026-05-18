@@ -24,8 +24,8 @@
   "llm_config": {
     "token_limit": 0,
     "authentication_configuration": {
-      "GROQ_API_KEY": "REMOVED_FOR_GITHUB",
-      "OPENAI_API_KEY": "REMOVED_FOR_GITHUB"
+      "GROQ_API_KEY": "YOUR_GROQ_API_KEY",
+      "OPENAI_API_KEY": ""
     },
     "embedding_service": {
       "model_name": "all-MiniLM-L6-v2",

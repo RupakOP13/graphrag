@@ -6,3 +6,10 @@ chroma_db/
 dataset/data/
 results/
 .DS_Store
+*.sqlite3
+*.log
+*.txt
+index_rag.py
+check_data.py
+quick_test.py
+benchmark_log.txt

@@ -2,14 +2,14 @@
 Pipeline 2: Basic RAG (Vector Embeddings + LLM)
 =================================================
 Industry standard RAG: chunk documents, embed into ChromaDB using
-local sentence-transformers, retrieve similar chunks, send to Groq LLM.
+ChromaDB's built-in ONNX embeddings (all-MiniLM-L6-v2), retrieve
+similar chunks, send to Groq LLM.
 """
 
 import time
 import json
 import os
 from groq import Groq
-from sentence_transformers import SentenceTransformer
 import chromadb
 
 import sys
@@ -42,7 +42,6 @@ class BasicRAGPipeline(BasePipeline):
     def __init__(self):
         super().__init__("Basic RAG")
         self.client = None
-        self.embedder = None
         self.chroma_client = None
         self.collection = None
         self._indexed = False
@@ -50,10 +49,7 @@ class BasicRAGPipeline(BasePipeline):
     def initialize(self):
         self.client = Groq(api_key=config.GROQ_API_KEY)
         
-        # Load local embedding model (free, no API key needed)
-        print(f"   Loading embedding model: {config.EMBEDDING_MODEL}...")
-        self.embedder = SentenceTransformer(config.EMBEDDING_MODEL)
-        
+        # ChromaDB uses built-in ONNX all-MiniLM-L6-v2 embeddings (384-dim)
         self.chroma_client = chromadb.PersistentClient(path=config.CHROMA_PERSIST_DIR)
         try:
             self.collection = self.chroma_client.get_collection(config.CHROMA_COLLECTION_NAME)
@@ -95,22 +91,18 @@ class BasicRAGPipeline(BasePipeline):
         
         print(f"Total chunks: {len(all_chunks)}")
         
-        # Batch embed with sentence-transformers (much faster than API)
-        batch_size = 500
+        # Batch embed with ChromaDB's built-in ONNX embeddings
+        batch_size = 100
         for start in range(0, len(all_chunks), batch_size):
             end = min(start + batch_size, len(all_chunks))
-            batch_texts = all_chunks[start:end]
-            
-            # Local embedding -- no rate limits!
-            embeddings = self.embedder.encode(batch_texts, show_progress_bar=False).tolist()
             
             self.collection.add(
-                documents=batch_texts,
-                embeddings=embeddings,
+                documents=all_chunks[start:end],
                 ids=all_ids[start:end],
                 metadatas=all_metadata[start:end]
             )
-            print(f"   Indexed {end}/{len(all_chunks)} chunks...")
+            if end % 1000 == 0 or end == len(all_chunks):
+                print(f"   Indexed {end}/{len(all_chunks)} chunks...")
         
         self._indexed = True
         print(f"Indexing complete! {len(all_chunks)} chunks")
@@ -119,11 +111,9 @@ class BasicRAGPipeline(BasePipeline):
         if top_k is None:
             top_k = config.RAG_TOP_K
         
-        # Embed query locally
-        query_emb = self.embedder.encode([question]).tolist()[0]
-        
+        # ChromaDB handles embedding automatically with built-in ONNX model
         results = self.collection.query(
-            query_embeddings=[query_emb],
+            query_texts=[question],
             n_results=top_k,
             include=["documents", "metadatas", "distances"]
         )
